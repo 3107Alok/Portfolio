@@ -1,16 +1,14 @@
 ---
 import { SectionTitle, ProjectCard } from '@/components/UI';
+import ProjectModal from '@/components/UI/ProjectModal.astro';
 import { ProjectLayout } from '@layouts/index';
+import { PROJECTS_LIST } from '@/config/ProjectsList';
 
 const { themeConfig, siteConfig, headerConfig, footerConfig } = await import(
     '@/config/portfolio.config'
 );
 
 const projectsCanonicalUrl = new URL('projects', siteConfig.siteUrl).toString();
-
-// Lazy loading ProjectInfo
-const ProjectInfo = import('@/config/ProjectsList');
-const { PROJECTS_LIST } = await ProjectInfo;
 ---
 
 <ProjectLayout
@@ -34,7 +32,7 @@ const { PROJECTS_LIST } = await ProjectInfo;
             )
         }
 
-        <div class="grid grid-cols-[repeat(auto-fill,minmax(500px,1fr))] gap-x-6 gap-y-3 mt-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
             {
                 PROJECTS_LIST?.map((project) => {
                     if (project?.isHidden) return;
@@ -44,4 +42,7 @@ const { PROJECTS_LIST } = await ProjectInfo;
             }
         </div>
     </SectionTitle>
+    
+    <!-- Single Reusable Project Modal -->
+    <ProjectModal />
 </ProjectLayout>

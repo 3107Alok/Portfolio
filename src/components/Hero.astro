@@ -7,7 +7,7 @@ const { config } = Astro.props;
 
 <section
     id="Hero"
-    class="w-full h-[calc(100vh-4rem)] py-4 bg-background flex justify-evenly lg:justify-around items-center flex-col-reverse lg:flex-row overflow-hidden"
+    class="w-full min-h-[calc(100vh-4rem)] h-auto py-12 px-6 bg-background flex justify-center items-center flex-col-reverse gap-8 lg:h-[calc(100vh-4rem)] lg:py-4 lg:px-0 lg:flex-row lg:justify-around lg:gap-0 lg:overflow-hidden"
 >
     <!-- Hero Intro Info -->
     <div class="w-full lg:w-fit flex justify-start items-center flex-col gap-8">
@@ -28,7 +28,10 @@ const { config } = Astro.props;
                 {config.firstName}
                 {" " + config.lastName}
             </h1>
-            <p class="Fade_Stagger">I'm a {config.position}.</p>
+            <p class="Fade_Stagger min-h-[40px] flex items-center justify-center lg:justify-start gap-1">
+                I'm a&nbsp;
+                <span id="role-text" class="gradientText font-ubuntu font-bold border-r-2 border-socialIconColor/80 pr-1 typing-cursor min-h-[30px]"></span>
+            </p>
             <p class="Fade_Stagger">
                 {config.tagLine.prefixText}
                 <span class="gradientText font-ubuntu">
@@ -99,3 +102,60 @@ const { config } = Astro.props;
         </div>
     </div>
 </section>
+
+<style>
+    @keyframes blink {
+        50% { border-color: transparent }
+    }
+    .typing-cursor {
+        animation: blink 0.75s step-end infinite;
+    }
+</style>
+
+<script>
+    const roles = [
+        "Software Engineer",
+        "Flutter Developer",
+        "Full Stack Developer",
+        "AI Developer"
+    ];
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const roleTextEl = document.getElementById("role-text");
+    const typingSpeed = 100;
+    const erasingSpeed = 50;
+    const newWordDelay = 2000;
+
+    function type() {
+        if (!roleTextEl) return;
+        const currentRole = roles[roleIndex];
+
+        if (isDeleting) {
+            roleTextEl.textContent = currentRole.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            roleTextEl.textContent = currentRole.substring(0, charIndex + 1);
+            charIndex++;
+        }
+
+        let delay = isDeleting ? erasingSpeed : typingSpeed;
+
+        if (!isDeleting && charIndex === currentRole.length) {
+            delay = newWordDelay;
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+            delay = 500;
+        }
+
+        setTimeout(type, delay);
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", () => setTimeout(type, 500));
+    } else {
+        setTimeout(type, 500);
+    }
+</script>

@@ -1,0 +1,116 @@
+---
+// SplashLoader.astro - Premium splash welcome screen loader
+---
+<div id="splash-loader" class="fixed inset-0 z-[9999] bg-[#07050e] flex flex-col justify-center items-center overflow-hidden transition-all duration-700 ease-in-out">
+    <!-- Premium Glow Backdrops -->
+    <div class="absolute w-[400px] h-[400px] rounded-full bg-purple-600/10 blur-[120px] animate-pulse"></div>
+    <div class="absolute w-[250px] h-[250px] rounded-full bg-pink-600/5 blur-[90px] animate-pulse" style="animation-delay: 1s;"></div>
+
+    <!-- Text & Content Container -->
+    <div class="z-10 text-center space-y-5 px-6">
+        <!-- Logo Icon / Animated SVG Emblem -->
+        <div class="flex justify-center mb-6 scale-95 opacity-0 animate-fade-in" style="animation-delay: 0.2s; animation-fill-mode: forwards;">
+            <div class="relative p-4 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-md shadow-2xl">
+                <svg class="w-12 h-12 text-purple-400 animate-spin-slow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" stroke-dasharray="16 8" stroke-linecap="round"/>
+                    <path d="M12 8V12L14 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Welcome Title -->
+        <h1 class="font-ubuntu text-3xl md:text-5xl font-bold tracking-wide text-white select-none opacity-0 translate-y-4 animate-slide-up" style="animation-delay: 0.4s; animation-fill-mode: forwards;">
+            Welcome to <span class="bg-gradient-to-r from-purple-400 via-fuchsia-400 to-pink-500 bg-clip-text text-transparent">Alok's Portfolio</span>
+        </h1>
+        
+        <!-- Animated Role badges -->
+        <p class="font-poppins text-xs md:text-sm text-white/50 tracking-[0.25em] uppercase select-none opacity-0 translate-y-4 animate-slide-up" style="animation-delay: 0.7s; animation-fill-mode: forwards;">
+            Software Engineer & Developer
+        </p>
+    </div>
+
+    <!-- Premium Loader Line -->
+    <div class="absolute bottom-16 left-1/2 transform -translate-x-1/2 w-48 h-[3px] bg-white/5 rounded-full overflow-hidden">
+        <div class="h-full bg-gradient-to-r from-purple-500 via-fuchsia-500 to-pink-500 w-0 animate-fill-progress"></div>
+    </div>
+</div>
+
+<style>
+    @keyframes spin-slow {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+    .animate-spin-slow {
+        animation: spin-slow 10s linear infinite;
+    }
+
+    @keyframes fade-in {
+        from { opacity: 0; transform: scale(0.9) translateY(10px); }
+        to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    .animate-fade-in {
+        animation: fade-in 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes slide-up {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-slide-up {
+        animation: slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes fill-progress {
+        0% { width: 0%; }
+        100% { width: 100%; }
+    }
+    .animate-fill-progress {
+        animation: fill-progress 2.2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+    }
+</style>
+
+<script>
+    const initLoader = () => {
+        const loader = document.getElementById("splash-loader");
+        if (!loader) return;
+
+        // Skip loader if already visited in this session
+        if (sessionStorage.getItem("splashVisited") === "true") {
+            loader.style.display = "none";
+            return;
+        }
+
+        // Lock scroll while loader is active
+        document.body.style.position = "fixed";
+        document.body.style.width = "100%";
+        document.body.style.overflow = "hidden";
+        document.documentElement.style.overflow = "hidden";
+
+        // Release loader and fade out after 2.5 seconds
+        setTimeout(() => {
+            loader.style.opacity = "0";
+            loader.style.transform = "translateY(-100vh)";
+            
+            // Re-enable body scroll
+            document.body.style.position = "";
+            document.body.style.width = "";
+            document.body.style.overflow = "";
+            document.documentElement.style.overflow = "";
+
+            // Mark visited
+            sessionStorage.setItem("splashVisited", "true");
+
+            setTimeout(() => {
+                loader.style.display = "none";
+                // Trigger customized event for on-load components
+                window.dispatchEvent(new Event("splashComplete"));
+            }, 700); // Animation duration
+        }, 2500);
+    };
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initLoader);
+    } else {
+        initLoader();
+    }
+</script>

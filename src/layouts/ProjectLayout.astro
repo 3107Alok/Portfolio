@@ -4,6 +4,7 @@ import { AstroFont } from 'astro-font';
 import { join } from 'node:path';
 import { Cursor, ProjectsHeader } from '@components/UI';
 import { Footer } from '@components/index';
+import SplashLoader from '@components/UI/SplashLoader.astro';
 
 import '@styles/themes.css';
 import '@styles/global.css';
@@ -165,6 +166,7 @@ const projectStructuredData = {
         />
     </head>
     <body>
+        <SplashLoader />
         <ProjectsHeader config={config.header} />
 
         <main class="max-w-450 mx-auto px-6">

@@ -1,9 +1,8 @@
 ---
 import { SectionTitle, ProjectCard } from "@components/UI";
+import ProjectModal from "./UI/ProjectModal.astro";
 
-// Lazy loading ProjectInfo
-const ProjectInfo = import("@/config/ProjectsList");
-const { PROJECTS_LIST } = await ProjectInfo;
+import { PROJECTS_LIST } from "@/config/ProjectsList";
 
 const PROJECT_LIST_LIMIT = 9;
 const SHOW_ALL_PROJECTS =
@@ -23,7 +22,7 @@ const SHOW_ALL_PROJECTS =
         }
 
         <div
-            class="grid grid-cols-[repeat(auto-fit,minmax(min(100%,500px),1fr))] gap-x-6 gap-y-3 mt-4 mb-8"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-4 mb-8"
         >
             {
                 PROJECTS_LIST.map((project, index) => {
@@ -43,11 +42,14 @@ const SHOW_ALL_PROJECTS =
                 <a
                     href="/projects"
                     title="View All Projects"
-                    class="flex items-center mx-auto w-fit px-4 py-2 bg-footerAlt border border-accent font-medium"
+                    class="flex items-center mx-auto w-fit px-4 py-2 bg-footerAlt border border-accent font-medium rounded-lg transition-all"
                 >
                     View All Projects
                 </a>
             )
         }
     </SectionTitle>
+    
+    <!-- Single Reusable Project Modal -->
+    <ProjectModal />
 </section>

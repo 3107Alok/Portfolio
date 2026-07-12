@@ -14,6 +14,15 @@ import Armsv2Shots from "./ARMSv2.webp"
 import NextmartShots from "./NextMart.webp"
 import VortexaShots from "./Vortexa.webp"
 import Armsv3Shots from "./ARMSv3.webp"
+import MedVerseMainpage from "./medverse_mainpage.png"
+import MedVerseShot1 from "./medverse_shot1.jpeg"
+import MedVerseShot2 from "./medverse_shot2.jpeg"
+import MedVerseShot3 from "./medverse_shot3.jpeg"
+import MedVerseShot4 from "./medverse_shot4.jpeg"
+import MedVerseShot5 from "./medverse_shot5.jpeg"
+import MedVerseShot6 from "./medverse_shot6.jpeg"
+import MedVerseShot7 from "./medverse_shot7.jpeg"
+import MedVerseShot8 from "./medverse_shot8.jpeg"
 
 export default {
     KalciShots,
@@ -32,4 +41,13 @@ export default {
     NextmartShots,
     VortexaShots,
     Armsv3Shots,
+    MedVerseMainpage,
+    MedVerseShot1,
+    MedVerseShot2,
+    MedVerseShot3,
+    MedVerseShot4,
+    MedVerseShot5,
+    MedVerseShot6,
+    MedVerseShot7,
+    MedVerseShot8,
 };

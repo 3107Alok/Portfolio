@@ -13,6 +13,7 @@ import SrinivasLogo from "./SrinivasLogo.svg"
 import XReconLogo from "./XReconLogo.svg"
 import YoatubeLogo from "./YoatubeLogo.svg"
 import VortexaLogo from "./VortexaLogo.svg"
+import MedVerseLogo from "./MedVerseLogo.png"
 
 export default {
     NextmartLogo,
@@ -30,4 +31,5 @@ export default {
     XReconLogo,
     YoatubeLogo,
     VortexaLogo,
+    MedVerseLogo,
 }

@@ -1,0 +1,260 @@
+---
+// ProjectModal.astro - Reusable premium modal component
+---
+
+<!-- Modal Backdrop overlay -->
+<div
+    id="project-modal"
+    class="fixed inset-0 z-50 flex items-end md:items-center justify-center p-0 md:p-6 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300 ease-out"
+>
+    <!-- Modal Sheet Container -->
+    <div
+        id="project-modal-container"
+        class="relative w-full md:w-[min(1200px,90vw)] max-w-[1200px] h-[90vh] bg-footerAltLite/95 border-t border-x md:border border-white/10 rounded-t-[24px] md:rounded-[24px] shadow-[0_-15px_40px_rgba(0,0,0,0.5)] md:shadow-[0_20px_50px_rgba(0,0,0,0.4)] overflow-hidden transform translate-y-full transition-transform duration-300 ease-out pointer-events-auto flex flex-col"
+    >
+        <!-- Modal Shimmer/Skeleton Loader Overlay -->
+        <div
+            id="modal-skeleton-loader"
+            class="absolute inset-0 bg-footerAltLite z-30 flex flex-col p-6 md:p-10 gap-6 transition-opacity duration-300 pointer-events-none"
+        >
+            <div class="h-8 w-1/3 bg-white/15 rounded-md animate-pulse"></div>
+            <div class="w-full aspect-video bg-white/10 rounded-xl animate-pulse flex items-center justify-center">
+                <div class="w-12 h-12 border-4 border-primary/30 border-t-primary rounded-full animate-spin"></div>
+            </div>
+            <div class="flex gap-4">
+                <div class="h-10 w-28 bg-white/15 rounded-md animate-pulse"></div>
+                <div class="h-10 w-28 bg-white/15 rounded-md animate-pulse"></div>
+            </div>
+            <div class="h-16 w-full bg-white/10 rounded-md animate-pulse"></div>
+            <div class="h-24 w-full bg-white/10 rounded-md animate-pulse"></div>
+        </div>
+
+        <!-- Sticky Header -->
+        <div class="flex justify-between items-center px-6 md:px-10 py-5 border-b border-white/10 shrink-0 bg-footerAltLite/80 backdrop-blur-md z-20">
+            <h2 id="modal-project-name" class="font-ubuntu text-xl md:text-2xl font-bold tracking-wide text-white">
+                Project Name
+            </h2>
+            <button
+                id="modal-close-btn"
+                aria-label="Close modal"
+                class="p-2 rounded-full bg-white/5 hover:bg-white/10 text-white/70 hover:text-white transition-all border border-white/5"
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Scrollable Modal Content -->
+        <div 
+            id="modal-scrollable-content" 
+            class="flex-1 min-h-0 overflow-y-auto overflow-x-hidden overscroll-contain p-6 md:p-10 pointer-events-auto"
+            style="-webkit-overflow-scrolling: touch; scrollbar-width: thin;"
+            data-lenis-prevent
+        >
+            <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 relative w-full">
+                <!-- Left Column (60% Desktop) - Information -->
+                <div class="w-full lg:w-[60%] flex flex-col space-y-8 order-2 sm:order-1 lg:order-1 pb-10">
+                    
+                    <!-- Project Title & Tagline & Action Buttons -->
+                    <div class="space-y-4">
+                        <div class="space-y-2">
+                            <h1 id="modal-project-title" class="font-ubuntu text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-none bg-gradient-to-r from-white via-white/90 to-white/70 bg-clip-text">
+                                Project Name
+                            </h1>
+                            <p id="modal-project-tagline" class="font-poppins text-sm md:text-base text-primary font-medium tracking-wide uppercase">
+                                Tagline
+                            </p>
+                        </div>
+                        
+                        <!-- Action Buttons next to/under Title -->
+                        <div class="flex flex-wrap gap-3 pt-2 w-full">
+                            <a
+                                id="modal-live-link"
+                                href="#"
+                                target="_blank"
+                                rel="noreferrer"
+                                class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-primary hover:bg-primary/90 text-white text-sm font-medium border border-primary/20 transition-all shadow-[0_4px_20px_rgba(147,51,234,0.25)] hover:shadow-[0_4px_25px_rgba(147,51,234,0.4)] flex-1 sm:flex-initial"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                </svg>
+                                <span>Download APK</span>
+                            </a>
+                            <a
+                                id="modal-source-link"
+                                href="#"
+                                target="_blank"
+                                rel="noreferrer"
+                                class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-white/5 hover:bg-white/10 text-white text-sm font-medium border border-white/10 transition-all flex-1 sm:flex-initial"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                                </svg>
+                                <span>GitHub Repository</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- About Description -->
+                    <div class="space-y-3">
+                        <h3 class="text-xs uppercase tracking-widest text-white/40 font-semibold">About</h3>
+                        <p id="modal-description" class="text-white/80 leading-relaxed text-sm md:text-base pr-2">
+                            Description goes here...
+                        </p>
+                    </div>
+
+                    <!-- Tech Stack -->
+                    <div class="space-y-3">
+                        <h3 class="text-xs uppercase tracking-widest text-white/40 font-semibold">Tech Stack</h3>
+                        <div id="modal-tech-stack" class="flex flex-wrap gap-2.5">
+                            <!-- Dynamic tech chips -->
+                        </div>
+                    </div>
+
+                    <!-- Project Information Card (Role, Duration, Platform, Status) -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-5 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md shadow-sm">
+                        <div>
+                            <span class="text-[10px] text-white/40 block uppercase tracking-widest font-semibold mb-1">Role</span>
+                            <span id="modal-info-role" class="text-sm font-semibold text-white/90">-</span>
+                        </div>
+                        <div>
+                            <span class="text-[10px] text-white/40 block uppercase tracking-widest font-semibold mb-1">Duration</span>
+                            <span id="modal-info-duration" class="text-sm font-semibold text-white/90">-</span>
+                        </div>
+                        <div>
+                            <span class="text-[10px] text-white/40 block uppercase tracking-widest font-semibold mb-1">Platform</span>
+                            <span id="modal-info-platform" class="text-sm font-semibold text-white/90">-</span>
+                        </div>
+                        <div>
+                            <span class="text-[10px] text-white/40 block uppercase tracking-widest font-semibold mb-1">Status</span>
+                            <span id="modal-info-status" class="text-sm font-semibold text-white/90">-</span>
+                        </div>
+                    </div>
+
+                    <!-- Key Features Checklist -->
+                    <div class="space-y-4">
+                        <h3 class="text-xs uppercase tracking-widest text-white/40 font-semibold">Key Features</h3>
+                        <div id="modal-features" class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <!-- Dynamic feature ticks with active sync highlights -->
+                        </div>
+                    </div>
+
+                    <!-- Technical Challenges (Optional) -->
+                    <div id="modal-challenges-section" class="space-y-3 hidden">
+                        <h3 class="text-xs uppercase tracking-widest text-white/40 font-semibold">Technical Challenges</h3>
+                        <p id="modal-challenges" class="text-white/80 leading-relaxed text-sm md:text-base pr-2">
+                            Challenges here...
+                        </p>
+                    </div>
+
+                    <!-- Future Improvements (Optional) -->
+                    <div id="modal-improvements-section" class="space-y-3 hidden">
+                        <h3 class="text-xs uppercase tracking-widest text-white/40 font-semibold">Future Improvements</h3>
+                        <p id="modal-improvements" class="text-white/80 leading-relaxed text-sm md:text-base pr-2">
+                            Improvements here...
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Right Column (40% Desktop) - Showcase -->
+                <div class="w-full lg:w-[40%] flex flex-col items-center justify-start order-1 sm:order-2 lg:order-2 shrink-0 py-6 bg-black/20 rounded-2xl border border-white/5 overflow-hidden lg:h-fit lg:sticky lg:top-0">
+                    
+                    <!-- Browser Mockup (Web Projects) -->
+                    <div
+                        id="browser-mockup"
+                        class="hidden w-full max-w-sm sm:max-w-md md:max-w-2xl rounded-lg border border-white/10 bg-black/40 overflow-hidden shadow-xl"
+                    >
+                        <div class="h-7 bg-white/5 border-b border-white/10 flex items-center px-4 gap-1.5 shrink-0">
+                            <span class="w-2.5 h-2.5 rounded-full bg-[#ff5f56]"></span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]"></span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-[#27c93f]"></span>
+                            <div id="browser-url-text" class="h-4 flex-1 mx-4 sm:mx-8 rounded bg-white/5 border border-white/5 text-[9px] text-white/30 flex items-center px-3 justify-center truncate">
+                                https://your-demo.com
+                            </div>
+                        </div>
+                        <div class="relative aspect-[16/10] overflow-hidden group">
+                            <div id="browser-carousel" class="w-full h-full relative overflow-hidden cursor-zoom-in">
+                                <!-- Slides dynamically injected -->
+                            </div>
+                            
+                            <!-- Navigation Arrows -->
+                            <button class="carousel-prev absolute left-3 top-1/2 -translate-y-1/2 p-1.5 rounded-full bg-black/50 hover:bg-black/80 text-white border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+                                </svg>
+                            </button>
+                            <button class="carousel-next absolute right-3 top-1/2 -translate-y-1/2 p-1.5 rounded-full bg-black/50 hover:bg-black/80 text-white border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+
+                            <!-- Carousel Dots -->
+                            <div class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10"></div>
+                        </div>
+                    </div>
+
+                    <!-- Phone Mockup (Mobile Projects) -->
+                    <div
+                        id="phone-mockup"
+                        class="hidden relative w-[180px] sm:w-[210px] aspect-[9/19.5] rounded-[38px] border-[6px] sm:border-8 border-[#1f1f1f] bg-black shadow-2xl overflow-hidden group"
+                    >
+                        <!-- Phone Camera Notch -->
+                        <div class="absolute top-1.5 left-1/2 -translate-x-1/2 w-20 sm:w-24 h-3.5 sm:h-4 rounded-full bg-[#1f1f1f] z-20 flex items-center justify-end px-2">
+                            <span class="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-blue-950/40"></span>
+                        </div>
+                        <!-- Screen Container -->
+                        <div class="w-full h-full relative overflow-hidden">
+                            <div id="phone-carousel" class="w-full h-full relative overflow-hidden cursor-zoom-in">
+                                <!-- Slides dynamically injected -->
+                            </div>
+                            
+                            <!-- Navigation Arrows -->
+                            <button class="carousel-prev absolute left-2.5 top-1/2 -translate-y-1/2 p-1.5 rounded-full bg-black/50 hover:bg-black/80 text-white border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+                                </svg>
+                            </button>
+                            <button class="carousel-next absolute right-2.5 top-1/2 -translate-y-1/2 p-1.5 rounded-full bg-black/50 hover:bg-black/80 text-white border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+
+                            <!-- Carousel Dots -->
+                            <div class="carousel-dots absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-10"></div>
+                        </div>
+                        <!-- Home line indicator -->
+                        <div class="absolute bottom-1 left-1/2 -translate-x-1/2 w-16 sm:w-20 h-0.5 rounded-full bg-white/25 z-20"></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Fullscreen Image Viewer Modal -->
+<div
+    id="fullscreen-viewer"
+    class="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center pointer-events-none opacity-0 transition-opacity duration-300"
+>
+    <button
+        id="close-viewer-btn"
+        aria-label="Close image preview"
+        class="absolute top-6 right-6 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-all text-white pointer-events-auto"
+    >
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    </button>
+    <img
+        id="viewer-img"
+        src=""
+        alt="Fullscreen project screenshot"
+        class="max-w-[90%] max-h-[90%] object-contain rounded-lg shadow-2xl transition-transform duration-300 scale-95"
+    />
+</div>
