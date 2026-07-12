@@ -1,4 +1,4 @@
-export { default as LogoIcon } from "./C.svg"
+export { default as LogoIcon } from "./A.svg"
 export { default as ContactArt } from "./ContactVector.svg"
 
 //Social Icons

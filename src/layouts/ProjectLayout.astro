@@ -14,7 +14,7 @@ const { title, description, canonical, ogImage, config } = Astro.props;
 const canonicalUrl =
     canonical ||
     new URL(
-        `projects/${title.replace(' | ChiragChrg', '').replaceAll(' ', '-').toLowerCase()}`,
+        `projects/${title.replace(' | AlokSingh', '').replaceAll(' ', '-').toLowerCase()}`,
         config.site.siteUrl,
     ).toString();
 const pageDescription = description || config.site.description;
@@ -42,7 +42,7 @@ const projectStructuredData = {
         <meta name="robots" content="index, follow" />
         <meta name="google-site-verification" content={config.site.googleSiteVerification} />
         <meta name="keywords" content={config.site.keywords} />
-        <meta name="author" content="ChiragChrg" />
+        <meta name="author" content="AlokSingh" />
         <link rel="manifest" href="/manifest.json" />
 
         <!-- Preload CSS Styles -->
@@ -66,8 +66,8 @@ const projectStructuredData = {
                 title: `${title}`,
                 description: pageDescription,
                 card: 'summary',
-                site: '@ChrgChirag',
-                creator: '@ChrgChirag',
+                site: '@ChrgAlok',
+                creator: '@ChrgAlok',
                 image: pageImage,
             }}
             extend={{

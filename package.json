@@ -2,17 +2,17 @@
   "name": "portfolio",
   "type": "module",
   "version": "2.0.0",
-  "homepage": "https://github.com/ChiragChrg/portfolio",
+  "homepage": "https://github.com/AlokSingh/portfolio",
   "author": {
-    "name": "ChiragChrg",
-    "email": "chiruchirag2001@gmail.com",
-    "url": "https://chiragchrg.netlify.app/"
+    "name": "Alok Singh",
+    "email": "3107aloksingh@gmail.com",
+    "url": "https://your-domain.com/"
   },
   "scripts": {
-    "dev": "bun run build:themes && astro dev --open --host",
-    "start": "bun run build:themes && astro dev",
+    "dev": "npm run build:themes && astro dev --open --host",
+    "start": "npm run build:themes && astro dev",
     "build:themes": "ts-node scripts/generateThemes.ts",
-    "build": "bun run build:themes && astro check && astro build",
+    "build": "npm run build:themes && astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint .",

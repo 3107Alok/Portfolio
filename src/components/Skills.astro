@@ -1,106 +1,68 @@
 ---
-import { CenterTitle, SkillTitle, SkillGrid } from "@components/UI";
-const skillStacks = await import("@/constants/skillStack");
+import { CenterTitle } from "@components/UI";
+import { Image } from "astro:assets";
+import {
+    ProgrammingLanguagesStack,
+    AndroidDevelopmentStack,
+    FrontendStack,
+    BackendStack,
+    DatabaseStack,
+    CloudStack,
+    ToolsStack,
+    AIMachineLearningStack
+} from "@/constants/skillStack";
 
-const WebLanguagesStack = skillStacks.WebLanguagesStack;
-const FrontendLibrariesStack = skillStacks.FrontendLibrariesStack;
-const BackendApisStack = skillStacks.BackendApisStack;
-const DatabaseStack = skillStacks.DatabaseStack;
-const StateEventStack = skillStacks.StateEventStack;
-const CloudDevOpsStack = skillStacks.CloudDevOpsStack;
-const ToolingTestingStack = skillStacks.ToolingTestingStack;
-const ConfigTemplatingStack = skillStacks.ConfigTemplatingStack;
-const IdesDesignStack = skillStacks.IdesDesignStack;
+const stacks = [
+    { title: "Programming Languages", data: ProgrammingLanguagesStack },
+    { title: "Android Development", data: AndroidDevelopmentStack },
+    { title: "Frontend", data: FrontendStack },
+    { title: "Backend", data: BackendStack },
+    { title: "Databases & Storage", data: DatabaseStack },
+    { title: "Cloud", data: CloudStack },
+    { title: "Tools", data: ToolsStack },
+    { title: "AI & Machine Learning", data: AIMachineLearningStack },
+];
 ---
 
-<section id="skills" class="w-full min-h-screen py-4 pt-14 bg-background">
+<section id="skills" class="w-full min-h-[calc(100vh-4rem)] py-6 pt-12 bg-background flex flex-col justify-center">
     <CenterTitle title="Tech Stack" color="primary" />
 
-    <!-- Web & Frontend Skills -->
-    <div
-        class="Fade_Up flex justify-center items-start flex-col lg:flex-row gap-2"
-    >
-        <div
-            class="Fade_Up flex_center flex-col gap-4 py-4 xs:p-4 w-full h-full"
-        >
-            <SkillTitle title="Web & Programming" color="primary" />
-            <SkillGrid stack={WebLanguagesStack} />
-        </div>
-
-        <div
-            class="Fade_Up flex_center flex-col gap-4 py-4 xs:p-4 w-full h-full"
-        >
-            <SkillTitle title="Frontend" color="primary" />
-            <SkillGrid stack={FrontendLibrariesStack} />
-        </div>
-    </div>
-
-    <!-- Backend & Database Skills -->
-    <div
-        class="Fade_Up flex justify-center items-start flex-col lg:flex-row gap-2"
-    >
-        <div
-            class="Fade_Up flex_center flex-col gap-4 py-4 xs:p-4 w-full h-full"
-        >
-            <SkillTitle title="Backend & APIs" color="primary" />
-            <SkillGrid stack={BackendApisStack} />
-        </div>
-
-        <div
-            class="Fade_Up flex_center flex-col gap-4 py-4 xs:p-4 w-full h-full"
-        >
-            <SkillTitle title="Databases & Storage" color="primary" />
-            <SkillGrid stack={DatabaseStack} />
-        </div>
-    </div>
-
-    <!-- State Management & Cloud Skills -->
-    <div
-        class="Fade_Up flex justify-center items-start flex-col lg:flex-row gap-2"
-    >
-        <div
-            class="Fade_Up flex_center flex-col gap-4 py-4 xs:p-4 w-full h-full"
-        >
-            <SkillTitle title="State & Events" color="primary" />
-            <SkillGrid stack={StateEventStack} />
-        </div>
-
-        <div
-            class="Fade_Up flex_center flex-col gap-4 py-4 xs:p-4 w-full h-full"
-        >
-            <SkillTitle title="Cloud & DevOps" color="primary" />
-            <SkillGrid stack={CloudDevOpsStack} />
-        </div>
-    </div>
-
-    <!-- Tooling & Config Skills -->
-    <div
-        class="Fade_Up flex justify-center items-start flex-col lg:flex-row gap-2"
-    >
-        <div
-            class="Fade_Up flex_center flex-col gap-4 py-4 xs:p-4 w-full h-full"
-        >
-            <SkillTitle title="Tooling & Observability" color="primary" />
-            <SkillGrid stack={ToolingTestingStack} />
-        </div>
-
-        <div
-            class="Fade_Up flex_center flex-col gap-4 py-4 xs:p-4 w-full h-full"
-        >
-            <SkillTitle title="Config & Templating" color="primary" />
-            <SkillGrid stack={ConfigTemplatingStack} />
-        </div>
-    </div>
-
-    <!-- IDEs & Design Skills -->
-    <div
-        class="Fade_Up flex justify-center items-start flex-col lg:flex-row gap-2"
-    >
-        <div
-            class="Fade_Up flex_center flex-col gap-4 py-4 xs:p-4 w-full h-full"
-        >
-            <SkillTitle title="IDEs & Design" color="primary" />
-            <SkillGrid stack={IdesDesignStack} />
-        </div>
+    <div class="max-w-[1300px] w-full mx-auto px-4 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6 pb-6">
+        {
+            stacks.map((stack) => (
+                <div class="Fade_Up rounded-[18px] p-5 border border-white/10 bg-white/[0.03] backdrop-blur-md shadow-lg flex flex-col justify-start gap-4 transition-all duration-300 hover:-translate-y-1.5 hover:border-purple-500/30 hover:shadow-[0_0_25px_rgba(102,0,255,0.12)] min-h-[200px]">
+                    <h3 class="font-ubuntu text-sm lg:text-base font-semibold tracking-wider border-b border-white/5 pb-2 mb-1">
+                        <span class="gradientText">{stack.title}</span>
+                    </h3>
+                    
+                    <div class="grid grid-cols-4 gap-x-2 gap-y-4">
+                        {
+                            stack.data.map((obj) => (
+                                <a
+                                    href={obj.link}
+                                    title={obj.description}
+                                    class="flex flex-col items-center justify-center gap-1.5 p-1 rounded-lg hover:bg-white/5 transition-all duration-200 text-center group"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    <div class="w-8 h-8 flex_center aspect-square transition-transform duration-200 group-hover:scale-110">
+                                        <Image
+                                            src={obj.icon}
+                                            alt={obj.name.replaceAll(" ", "_") + "_Icon"}
+                                            width={32}
+                                            height={32}
+                                            class="object-contain w-full h-full"
+                                        />
+                                    </div>
+                                    <span class="text-[10px] md:text-xs text-foreground/80 font-medium whitespace-nowrap overflow-hidden text-ellipsis w-full group-hover:text-purple-300">
+                                        {obj.name}
+                                    </span>
+                                </a>
+                            ))
+                        }
+                    </div>
+                </div>
+            ))
+        }
     </div>
 </section>

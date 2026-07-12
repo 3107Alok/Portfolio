@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import { Avatar_180 } from "@assets/images";
 
 const { config } = Astro.props;
 ---
@@ -13,7 +14,7 @@ const { config } = Astro.props;
         <div class="text-[18px] lg:text-[26px] text-center lg:text-left">
             <p class="Fade_Stagger">{config.salutation}</p>
             <h1
-                class="Fade_Stagger gradientText font-ubuntu text-[4em] lg:text-[9rem] leading-tight max-w-xs md:max-w-6xl"
+                class="Fade_Stagger gradientText font-ubuntu text-[3.5em] lg:text-[6.5rem] leading-tight max-w-xs md:max-w-6xl"
             >
                 {config.firstName}
                 {" " + config.lastName}
@@ -63,14 +64,13 @@ const { config } = Astro.props;
             id="avatarImage"
             role="button"
             class="flex_center w-[180px] sm:w-[250px] aspect-square rounded-full z-10 cursor-pointer"
-            style={{ opacity: 0 }}
         >
             <Image
-                src={config.avatar}
+                src={Avatar_180}
                 alt=`${config.firstName} ${config.lastName} Avatar`
                 class="object-cover w-full h-full rounded-full noDrag"
-                width="180"
-                height="180"
+                width="500"
+                height="500"
                 priority
             />
         </div>

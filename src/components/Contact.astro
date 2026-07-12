@@ -5,10 +5,10 @@ import { ContactArt } from '@assets/SVGs';
 import { Image } from 'astro:assets';
 ---
 
-<section id="contact" class="w-full min-h-screen mb-16 lg:mb-[25em] py-4 pt-14">
+<section id="contact" class="w-full min-h-[calc(100vh-4rem)] mb-12 lg:mb-20 py-2 pt-10">
     <CenterTitle title="Contact" color="primary" />
 
-    <div class="w-full flex_center flex-col p-4 text-[1.2em] text-center">
+    <div class="w-full flex_center flex-col p-2 text-[1.1em] text-center">
         <h3 class="Fade_Up gradientText font-ubuntu text-[2rem] lg:text-[2.4rem]">
             Let's collaborate!
         </h3>
@@ -16,14 +16,14 @@ import { Image } from 'astro:assets';
         <p class="Fade_Up">or just to say hello. 😉</p>
     </div>
 
-    <div class="flex_center flex-col lg:flex-row w-full h-full gap-4 lg:gap-10 lg:px-20 pt-8 pb-16">
+    <div class="flex_center flex-col lg:flex-row w-full h-full gap-4 lg:gap-10 lg:px-20 pt-4 pb-8">
         <div class="relative w-full flex_center flex-col">
             <div
-                class="Fade_Up w-full max-w-[350px] scale-[0.9] lg:scale-100 lg:max-w-[450px] aspect-square rounded-full border-2 border-dashed border-contactSocialColor mb-8 md:mb-0 md:mt-7"
+                class="Fade_Up w-full max-w-[320px] scale-[0.9] lg:scale-[0.85] lg:max-w-[380px] aspect-square rounded-full border-2 border-dashed border-contactSocialColor mb-8 md:mb-0 md:mt-7"
                 id="socialCircle"
             >
                 <a
-                    href="https://www.facebook.com/ChiragChrg/"
+                    href="https://www.facebook.com/AlokSingh/"
                     class="socialIcon absolute w-12 lg:w-16 aspect-square flex_center p-2 lg:p-4 bg-background outline-dashed outline-2 outline-contactSocialColor rounded-full"
                     title="Facebook"
                     target="_blank"
@@ -47,7 +47,7 @@ import { Image } from 'astro:assets';
                     </svg>
                 </a>
                 <a
-                    href="https://www.instagram.com/chiragchrg/"
+                    href="https://www.instagram.com/AlokSingh/"
                     class="socialIcon absolute w-12 lg:w-16 aspect-square flex_center p-2 lg:p-4 bg-background outline-dashed outline-2 outline-contactSocialColor rounded-full"
                     title="Instagram"
                     target="_blank"
@@ -71,7 +71,7 @@ import { Image } from 'astro:assets';
                     </svg>
                 </a>
                 <a
-                    href="mailto:chiruchirag2001@gmail.com"
+                    href="mailto:chiruAlok2001@gmail.com"
                     class="socialIcon absolute w-12 lg:w-16 aspect-square flex_center p-2 lg:p-4 bg-background outline-dashed outline-2 outline-contactSocialColor rounded-full"
                     title="Gmail"
                     target="_blank"
@@ -97,7 +97,7 @@ import { Image } from 'astro:assets';
                     </svg>
                 </a>
                 <a
-                    href="https://x.com/ChrgChirag"
+                    href="https://x.com/ChrgAlok"
                     class="socialIcon absolute w-12 lg:w-16 aspect-square flex_center p-2 lg:p-4 bg-background outline-dashed outline-2 outline-contactSocialColor rounded-full"
                     title="Twitter"
                     target="_blank"
@@ -148,7 +148,7 @@ import { Image } from 'astro:assets';
             </div>
 
             <Image
-                class="Fade_Up absolute bottom-10 md:bottom-2 w-[300px] md:w-[400px]"
+                class="Fade_Up absolute bottom-10 md:bottom-2 w-[260px] md:w-[320px]"
                 src={ContactArt}
                 alt="ContactArt"
                 loading="lazy"

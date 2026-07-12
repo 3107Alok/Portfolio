@@ -1,11 +1,7 @@
 ---
 import { Download } from 'lucide-preact';
-import ThemeDropdown from '@components/UI/ThemeDropdown.astro';
-import ThemeButton from '@components/UI/ThemeButton.astro';
-
+import ThemeDropdown from './ThemeDropdown.astro';
 const { config } = Astro.props;
-
-const showThemeDropdown = import.meta.env.PUBLIC_SHOW_THEME_MENU === 'true';
 ---
 
 <header id="header" class="hidden lg:block sticky top-0 max-w-[1800px] mx-auto z-50">
@@ -17,6 +13,7 @@ const showThemeDropdown = import.meta.env.PUBLIC_SHOW_THEME_MENU === 'true';
         </a>
 
         <nav class="Header_Nav relative tracking-wide flex gap-6">
+            <a class="Fade_Down_Header" href="#home">HOME</a>
             <a class="Fade_Down_Header" href="#about">ABOUT</a>
             <a class="Fade_Down_Header" href="#skills">SKILLS</a>
             <a class="Fade_Down_Header" href="#projects">PROJECTS</a>
@@ -24,8 +21,8 @@ const showThemeDropdown = import.meta.env.PUBLIC_SHOW_THEME_MENU === 'true';
         </nav>
 
         <div class="flex_center gap-4">
-            {showThemeDropdown && <ThemeDropdown className="Fade_Down_Header" idPrefix="Desktop" />}
-            <ThemeButton className="Fade_Down_Header" />
+            <ThemeDropdown idPrefix="Desktop" />
+
 
             <a
                 class="Fade_Down_Header Header_ActionBtn relative overflow-hidden rounded-sm flex_center"

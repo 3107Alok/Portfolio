@@ -1,0 +1,15 @@
+<svg width="57.8" height="72.301" viewBox="0 0 57.8 72.301" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="Gradient">
+            <stop stop-color="#6600FF" offset="0%" />
+            <stop stop-color="#ff00bf" offset="100%" />
+        </linearGradient>
+    </defs>
+
+    <g id="Alok" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#000" stroke-width="0"
+        fill="url(#Gradient)">
+        <path
+            d="M 28.9,0 C 31,0 32.5,1.5 33.5,3.5 L 56.8,63 C 58.5,67 56.5,72 52,72 C 49,72 47.5,70 46.5,67.5 L 39.5,49 L 18.3,49 L 11.3,67.5 C 10.3,70 8.8,72 5.8,72 C 1.3,72 -0.7,67 1,63 L 24.3,3.5 C 25.3,1.5 26.8,0 28.9,0 Z M 28.9,18 L 21.5,37.5 L 36.3,37.5 Z"
+            vector-effect="non-scaling-stroke" />
+    </g>
+</svg>

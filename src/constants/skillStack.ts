@@ -8,8 +8,70 @@ export interface ISkill {
     link: string;
 }
 
-// #region Web Fundamentals & Languages
-export const WebLanguagesStack = [
+// 1. Programming Languages
+export const ProgrammingLanguagesStack = [
+    {
+        name: "Java",
+        description: "Object-oriented programming language widely used for Android, enterprise, and backend applications.",
+        icon: SKILLS.JavaIcon,
+        link: "https://www.oracle.com/java/",
+    },
+    {
+        name: "JavaScript",
+        description: "High-level scripting language for adding interactivity to web pages and backend servers.",
+        icon: SKILLS.JsIcon,
+        link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    },
+    {
+        name: "Python",
+        description: "High-level, general-purpose programming language focused on readability and rapid development.",
+        icon: SKILLS.PythonIcon,
+        link: "https://www.python.org/",
+    },
+    {
+        name: "C++",
+        description: "General-purpose programming language with support for high-performance applications.",
+        icon: SKILLS.CppIcon,
+        link: "https://isocpp.org/",
+    },
+    {
+        name: "Dart",
+        description: "Client-optimized programming language for fast apps on any platform, developed by Google.",
+        icon: SKILLS.DartIcon,
+        link: "https://dart.dev/",
+    },
+] as const;
+
+// 2. Android Development
+export const AndroidDevelopmentStack = [
+    {
+        name: "Flutter",
+        description: "Google's open-source framework for building beautiful, natively compiled multi-platform applications.",
+        icon: SKILLS.FlutterIcon,
+        link: "https://flutter.dev/",
+    },
+    {
+        name: "Android Studio",
+        description: "The official Integrated Development Environment (IDE) for Android app development.",
+        icon: SKILLS.AndroidStudioIcon,
+        link: "https://developer.android.com/studio",
+    },
+    {
+        name: "SQLite",
+        description: "C-language library that implements a small, fast, self-contained SQL database engine.",
+        icon: SKILLS.SqliteIcon,
+        link: "https://www.sqlite.org/",
+    },
+    {
+        name: "Provider",
+        description: "A wrapper around InheritedWidget to make state management in Flutter easier and more reusable.",
+        icon: SKILLS.ProviderIcon,
+        link: "https://pub.dev/packages/provider",
+    },
+] as const;
+
+// 3. Frontend
+export const FrontendStack = [
     {
         name: "HTML",
         description: "HyperText Markup Language for creating the structure of web pages.",
@@ -23,59 +85,6 @@ export const WebLanguagesStack = [
         link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
     },
     {
-        name: "JavaScript",
-        description: "High-level scripting language for adding interactivity to web pages.",
-        icon: SKILLS.JsIcon,
-        link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-    },
-    {
-        name: "TypeScript",
-        description: "A superset of JavaScript adding static typing for building large-scale applications with enhanced maintainability and tooling support.",
-        icon: SKILLS.TsIcon,
-        link: "https://www.typescriptlang.org/",
-    },
-    {
-        name: "Python",
-        description: "High-level, general-purpose programming language focused on readability and rapid development.",
-        icon: SKILLS.PythonIcon,
-        link: "https://www.python.org/",
-    },
-    {
-        name: "C++",
-        description: "General-purpose programming language with support for low-level memory manipulation and high-performance applications.",
-        icon: SKILLS.CppIcon,
-        link: "https://isocpp.org/",
-    },
-    {
-        name: "Java",
-        description: "Object-oriented programming language widely used for enterprise, Android, and backend applications.",
-        icon: SKILLS.JavaIcon,
-        link: "https://www.oracle.com/java/",
-    },
-    {
-        name: "C#",
-        description: "Modern, object-oriented language for building applications on the .NET platform.",
-        icon: SKILLS.CSharpIcon,
-        link: "https://learn.microsoft.com/en-us/dotnet/csharp/",
-    },
-    {
-        name: "PHP",
-        description: "Server-side scripting language for building dynamic web applications.",
-        icon: SKILLS.PhpIcon,
-        link: "https://www.php.net/",
-    },
-    {
-        name: "R",
-        description: "Language and environment for statistical computing and graphics.",
-        icon: SKILLS.RIcon,
-        link: "https://www.r-project.org/",
-    },
-] as const;
-// #endregion
-
-// #region Frontend & UI Libraries
-export const FrontendLibrariesStack = [
-    {
         name: "React.js",
         description: "JavaScript library for building user interfaces with reusable components.",
         icon: SKILLS.ReactIcon,
@@ -83,148 +92,45 @@ export const FrontendLibrariesStack = [
     },
     {
         name: "Next.js",
-        description: "React framework for server-side rendering, static site generation, and routing, offering improved performance and SEO optimization.",
+        description: "React framework for server-side rendering, static site generation, and SEO optimization.",
         icon: SKILLS.NextIcon,
         link: "https://nextjs.org/",
     },
-    {
-        name: "Astro",
-        description: "Frontend framework for streamlined development, integrating with popular tools to create fast, modern websites with minimal client-side JavaScript.",
-        icon: SKILLS.AstroIcon,
-        link: "https://astro.build/",
-    },
-    {
-        name: "Tailwind CSS",
-        description: "Utility-first CSS framework providing atomic utility classes for rapid UI development with minimal custom CSS.",
-        icon: SKILLS.TailwindIcon,
-        link: "https://tailwindcss.com/",
-    },
-    {
-        name: "Preact.js",
-        description: "Fast, lightweight alternative to React with the same modern API in a smaller bundle.",
-        icon: SKILLS.PreactIcon,
-        link: "https://preactjs.com/",
-    },
-    {
-        name: "D3.js",
-        description: "Versatile JavaScript library for data visualization, enabling dynamic, interactive graphics and charts by binding data to DOM elements.",
-        icon: SKILLS.D3JsIcon,
-        link: "https://d3js.org/",
-    },
-    {
-        name: "GSAP",
-        description: "Robust JavaScript animation library for performant, timeline-based animations on the web.",
-        icon: SKILLS.GSAPIcon,
-        link: "https://gsap.com/",
-    },
-    {
-        name: "Framer Motion",
-        description: "Animation library for React that provides declarative, production-ready motion and transitions.",
-        icon: SKILLS.MotionIcon,
-        link: "https://www.framer.com/motion/",
-    },
 ] as const;
-// #endregion
 
-// #region State & Events
-export const StateEventStack = [
+// 4. Backend
+export const BackendStack = [
     {
-        name: "Redux",
-        description: "Predictable state management library for JavaScript applications, enabling consistent and scalable code.",
-        icon: SKILLS.ReduxIcon,
-        link: "https://redux.js.org/",
+        name: "Flask",
+        description: "A micro web framework written in Python, designed to make getting started quick and easy.",
+        icon: SKILLS.FlaskIcon,
+        link: "https://flask.palletsprojects.com/",
     },
-    {
-        name: "Zustand",
-        description: "Tiny, fast, and scalable state management for React applications, providing a simple and intuitive API.",
-        icon: SKILLS.ZustandIcon,
-        link: "https://zustand-demo.pmnd.rs/",
-    },
-    {
-        name: "Nanostores",
-        description: "Lightweight state management library for JavaScript applications, designed for simplicity and high performance.",
-        icon: SKILLS.NanostoresIcon,
-        link: "https://github.com/nanostores/nanostores",
-    },
-    {
-        name: "TanStack Query",
-        description: "React library for managing, caching, and synchronizing server state with a powerful and intuitive API.",
-        icon: SKILLS.ReactQueryIcon,
-        link: "https://tanstack.com/query/latest/",
-    },
-    {
-        name: "Socket.io",
-        description: "Real-time bidirectional communication library for building interactive web applications.",
-        icon: SKILLS.SocketIoIcon,
-        link: "https://socket.io/",
-    },
-    {
-        name: "NATS",
-        description: "High-performance messaging system for cloud-native applications, enabling pub/sub, request-reply, and streaming.",
-        icon: SKILLS.NatsIcon,
-        link: "https://nats.io/",
-    },
-] as const;
-// #endregion
-
-// #region Backend & APIs
-export const BackendApisStack = [
     {
         name: "Node.js",
-        description: "JavaScript runtime for server-side applications, enabling scalable and event-driven architectures.",
+        description: "JavaScript runtime for building scalable and performant backend server applications.",
         icon: SKILLS.NodeIcon,
         link: "https://nodejs.org/",
     },
     {
-        name: "Express.js",
-        description: "Minimal and flexible Node.js web framework for building APIs and web applications.",
-        icon: SKILLS.ExpressIcon,
-        link: "https://expressjs.com/",
-    },
-    {
-        name: "PHP",
-        description: "Server-side scripting language for building dynamic web applications.",
-        icon: SKILLS.PhpIcon,
-        link: "https://www.php.net/",
-    },
-    {
-        name: ".NET",
-        description: "Developer platform for building web, desktop, mobile, and cloud applications using C# and other languages.",
-        icon: SKILLS.DotnetIcon,
-        link: "https://learn.microsoft.com/en-us/dotnet/",
-    },
-    {
         name: "REST API",
-        description: "Architectural style for designing networked applications using standardized HTTP methods and resources.",
+        description: "Architectural style for designing networked applications using standardized HTTP methods.",
         icon: SKILLS.RestApiIcon,
         link: "https://restfulapi.net/",
     },
-    {
-        name: "Firebase",
-        description: "Backend-as-a-service platform offering authentication, real-time databases, storage, and hosting.",
-        icon: SKILLS.FirebaseIcon,
-        link: "https://firebase.google.com/",
-    },
-    {
-        name: "Auth.js",
-        description: "Authentication library designed specifically for Next.js applications, providing robust authentication features and seamless integration.",
-        icon: SKILLS.NextAuthIcon,
-        link: "https://authjs.dev/",
-    },
-    {
-        name: "Google APIs",
-        description: "Suite of APIs and services for integrating Google products such as Drive, Maps, and more.",
-        icon: SKILLS.GoogleCloud,
-        link: "https://developers.google.com/",
-    }
 ] as const;
-// #endregion
 
-// #region Databases, Caching & ORM
+// 5. Databases & Storage
 export const DatabaseStack = [
     {
+        name: "Firestore",
+        description: "Serverless NoSQL document database from Firebase for real-time applications.",
+        icon: SKILLS.FirebaseIcon,
+        link: "https://firebase.google.com/docs/firestore",
+    },
+    {
         name: "MongoDB",
-        description: "NoSQL database offering flexibility and scalability for storing and managing data efficiently.",
+        description: "NoSQL document database offering flexibility and scalability for storing structured data.",
         icon: SKILLS.MongoIcon,
         link: "https://www.mongodb.com/",
     },
@@ -235,87 +141,43 @@ export const DatabaseStack = [
         link: "https://www.mysql.com/",
     },
     {
-        name: "PostgreSQL",
-        description: "Advanced open-source relational database with strong SQL compliance and extensibility.",
-        icon: SKILLS.PostgresIcon,
-        link: "https://www.postgresql.org/",
-    },
-    {
-        name: "Firestore",
-        description: "Serverless NoSQL document database from Firebase for real-time and offline-first applications.",
-        icon: SKILLS.FirebaseIcon,
-        link: "https://firebase.google.com/docs/firestore",
-    },
-    {
-        name: "Prisma",
-        description: "Next-generation ORM for Node.js and TypeScript, simplifying database access and schema management.",
-        icon: SKILLS.PrismaIcon,
-        link: "https://www.prisma.io/",
-    },
-    {
-        name: "Redis",
-        description: "In-memory data structure store used for caching, message brokering, and real-time analytics.",
-        icon: SKILLS.RedisIcon,
-        link: "https://redis.io/",
-    },
-    {
-        name: "EdgeStore",
-        description: "Open-source file storage service designed for scalability and performance, with efficient updates and a minimal API.",
-        icon: SKILLS.EdgeStoreIcon,
-        link: "https://edgestore.dev/",
-    },
-    {
         name: "AWS S3",
         description: "Highly scalable object storage service for static assets, backups, and file uploads.",
         icon: SKILLS.AwsS3Icon,
         link: "https://aws.amazon.com/s3/",
     },
 ] as const;
-// #endregion
 
-// #region Cloud, Storage & DevOps
-export const CloudDevOpsStack = [
-    {
-        name: "Docker",
-        description: "Containerization platform for packaging applications and their dependencies into portable containers.",
-        icon: SKILLS.DockerIcon,
-        link: "https://www.docker.com/",
-    },
+// 6. Cloud
+export const CloudStack = [
     {
         name: "Firebase",
-        description: "Backend-as-a-service platform offering authentication, real-time databases, storage, and hosting.",
+        description: "Backend services, authentication, and static web hosting by Google.",
         icon: SKILLS.FirebaseIcon,
         link: "https://firebase.google.com/",
     },
     {
-        name: "Google Cloud",
-        description: "Cloud platform providing infrastructure, storage, and managed services for deploying applications.",
-        icon: SKILLS.GoogleCloud,
-        link: "https://cloud.google.com/",
-    },
-    {
-        name: "Netlify",
-        description: "Platform for deploying and hosting modern web projects with built-in CI/CD and serverless functions.",
-        icon: SKILLS.NetlifyIcon,
-        link: "https://www.netlify.com/",
-    },
-    {
         name: "Vercel",
-        description: "Deployment platform optimized for Next.js and frontend frameworks with a global edge network.",
+        description: "Cloud platform for serverless deployment, optimized for frontend and Next.js applications.",
         icon: SKILLS.VercelIcon,
         link: "https://vercel.com/",
     },
     {
         name: "Render",
-        description: "Cloud platform for hosting web services, static sites, and background workers with simple configuration.",
+        description: "Unified cloud platform to build and run all your apps and websites with ease.",
         icon: SKILLS.RenderIcon,
         link: "https://render.com/",
     },
+    {
+        name: "AWS",
+        description: "Amazon Web Services cloud platform offering hosting, serverless APIs, and computing resources.",
+        icon: SKILLS.AwsIcon,
+        link: "https://aws.amazon.com/",
+    },
 ] as const;
-// #endregion
 
-// #region Tooling, Testing & Observability
-export const ToolingTestingStack = [
+// 7. Tools
+export const ToolsStack = [
     {
         name: "Git",
         description: "Distributed version control system for tracking changes and collaborating on code.",
@@ -324,127 +186,71 @@ export const ToolingTestingStack = [
     },
     {
         name: "GitHub",
-        description: "Code hosting platform for Git repositories with collaboration and CI/CD features.",
+        description: "Code hosting platform for Git repositories with collaboration and CI/CD tools.",
         icon: SKILLS.GithubIcon,
         link: "https://github.com/",
     },
     {
-        name: "npm",
-        description: "Package manager for JavaScript, used to install and manage project dependencies.",
-        icon: SKILLS.NpmIcon,
-        link: "https://www.npmjs.com/",
-    },
-    {
-        name: "Bun",
-        description: "All-in-one JavaScript runtime, bundler, and test runner focused on performance.",
-        icon: SKILLS.BunIcon,
-        link: "https://bun.sh/",
-    },
-    {
-        name: "Vite",
-        description: "Modern build tooling for web development with rapid startup and hot module replacement.",
-        icon: SKILLS.ViteIcon,
-        link: "https://vitejs.dev/",
-    },
-    {
-        name: "Jest",
-        description: "JavaScript testing framework for unit and integration tests with a simple API.",
-        icon: SKILLS.JestIcon,
-        link: "https://jestjs.io/",
-    },
-    {
-        name: "Postman",
-        description: "API platform for designing, testing, and documenting HTTP APIs.",
-        icon: SKILLS.PostmanIcon,
-        link: "https://www.postman.com/",
-    },
-    {
-        name: "Swagger / OpenAPI",
-        description: "Specification and tooling ecosystem for designing, documenting, and testing REST APIs.",
-        icon: SKILLS.SwaggerIcon,
-        link: "https://swagger.io/",
-    },
-    {
-        name: "OpenTelemetry",
-        description: "Observability framework for generating, collecting, and exporting traces, metrics, and logs.",
-        icon: SKILLS.OpenTelemetryIcon,
-        link: "https://opentelemetry.io/",
-    },
-    {
-        name: "Streamlit",
-        description: "Python framework for building data apps and dashboards with minimal boilerplate.",
-        icon: SKILLS.StreamlitIcon,
-        link: "https://streamlit.io/",
-    },
-] as const;
-// #endregion
-
-// #region Configuration & Templating
-export const ConfigTemplatingStack = [
-    {
-        name: "YAML",
-        description: "Human-readable data serialization format commonly used for configuration files.",
-        icon: SKILLS.YamlIcon,
-        link: "https://yaml.org/",
-    },
-    {
-        name: "JSON",
-        description: "Lightweight data-interchange format widely used for APIs, configuration, and structured data.",
-        icon: SKILLS.JsonIcon,
-        link: "https://www.json.org/",
-    },
-    {
-        name: "Markdown",
-        description: "Lightweight markup language for formatting documentation, notes, and content in plain text.",
-        icon: SKILLS.MarkdownIcon,
-        link: "https://www.markdownguide.org/",
-    },
-    {
-        name: "FreeMarker",
-        description: "Java-based template engine for generating HTML, emails, and other text outputs from templates.",
-        icon: SKILLS.FreeMarkerIcon,
-        link: "https://freemarker.apache.org/",
-    },
-] as const;
-// #endregion
-
-// #region IDEs & Design Tools
-export const IdesDesignStack = [
-    {
         name: "VS Code",
-        description: "Lightweight, extensible source-code editor with rich ecosystem and debugging support.",
+        description: "Lightweight, highly extensible code editor widely used by developers.",
         icon: SKILLS.VsCodeIcon,
         link: "https://code.visualstudio.com/",
     },
     {
-        name: "Visual Studio",
-        description: "Integrated development environment for .NET, C++, and other Microsoft-stack applications.",
-        icon: SKILLS.VisualStudioIcon,
-        link: "https://visualstudio.microsoft.com/",
-    },
-    {
-        name: "Android Studio",
-        description: "Official IDE for Android development with integrated tools for building and profiling apps.",
-        icon: SKILLS.AndroidStudioIcon,
-        link: "https://developer.android.com/studio",
-    },
-    {
-        name: "Figma",
-        description: "Collaborative interface design tool for creating UI designs, prototypes, and design systems.",
-        icon: SKILLS.FigmaIcon,
-        link: "https://www.figma.com/",
+        name: "Antigravity",
+        description: "Your friendly AI coding assistant by Google Deepmind team, helping you build this portfolio.",
+        icon: SKILLS.AntigravityIcon,
+        link: "https://github.com/google",
     },
 ] as const;
-// #endregion
+
+// 8. AI & Machine Learning
+export const AIMachineLearningStack = [
+    {
+        name: "Scikit-learn",
+        description: "Simple and efficient tools for predictive data analysis and machine learning in Python.",
+        icon: SKILLS.ScikitIcon,
+        link: "https://scikit-learn.org/",
+    },
+    {
+        name: "tflite",
+        description: "TensorFlow Lite is a mobile schema for deploying lightweight machine learning models on device.",
+        icon: SKILLS.TfliteIcon,
+        link: "https://www.tensorflow.org/lite",
+    },
+    {
+        name: "Pandas",
+        description: "Fast, powerful, flexible and easy to use open source data analysis and manipulation tool.",
+        icon: SKILLS.PandasIcon,
+        link: "https://pandas.pydata.org/",
+    },
+    {
+        name: "NumPy",
+        description: "The fundamental package for scientific computing with Python, offering powerful N-dimensional arrays.",
+        icon: SKILLS.NumpyIcon,
+        link: "https://numpy.org/",
+    },
+    {
+        name: "Computer Vision",
+        description: "Field of artificial intelligence that enables computers and systems to derive meaningful information from digital images.",
+        icon: SKILLS.CvIcon,
+        link: "https://wikipedia.org/wiki/Computer_vision",
+    },
+    {
+        name: "Google Earth Engine",
+        description: "Cloud platform for scientific analysis and visualization of geospatial datasets.",
+        icon: SKILLS.EarthEngineIcon,
+        link: "https://earthengine.google.com/",
+    },
+] as const;
 
 export default {
-    WebLanguagesStack,
-    FrontendLibrariesStack,
-    StateEventStack,
-    BackendApisStack,
+    ProgrammingLanguagesStack,
+    AndroidDevelopmentStack,
+    FrontendStack,
+    BackendStack,
     DatabaseStack,
-    CloudDevOpsStack,
-    ToolingTestingStack,
-    ConfigTemplatingStack,
-    IdesDesignStack,
+    CloudStack,
+    ToolsStack,
+    AIMachineLearningStack,
 };

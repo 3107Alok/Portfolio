@@ -16,13 +16,13 @@ export const themeConfig = ThemeOptions.DEFAULT;
 
 // Site Configuration
 export const siteConfig = {
-    title: "Chirag Chrg | Fullstack Software Engineer & Web Developer",
-    description: "Chirag Chrg is a full stack software engineer building high-performance, interactive web applications, real-time systems, and scalable digital experiences.",
-    canonical: "https://chiragchrg.netlify.app/",
-    googleSiteVerification: "YRAUUyc8TP4QJ1s53KAdLxcON9xifQf33BnLeP-F_5Y",
-    keywords: "Chirag Chrg, ChiragChrg, Fullstack Software Engineer, Fullstack Web Developer, React Developer, Node.js Developer, TypeScript Developer, UI/UX Engineer, Frontend Developer, Backend Developer, JavaScript Developer, Portfolio, Vortexa, ARMS, ARMS 2.0, ARMS v3, Academic Resource Management System, xrecon, Oriv, Oriv.io, Epitome, Epitome 2k24, AIMIT, I create exciting stuff on the internet, Modern Web Apps, Scalable Web Applications",
-    avatar: "https://raw.githubusercontent.com/ChiragChrg/ChiragChrg.github.io/main/Avatar.webp",
-    siteUrl: "https://chiragchrg.netlify.app/",
+    title: "Alok Singh | Software Engineer & Developer",
+    description: "Alok Singh is a Computer Science undergraduate skilled in Flutter, Python, and serverless AWS architectures, building full-stack, AI-integrated applications.",
+    canonical: "https://your-domain.com/",
+    googleSiteVerification: "",
+    keywords: "Alok Singh, Software Engineer, Flutter Developer, Python Developer, AWS, Serverless, AI-integrated applications, Fullstack Developer",
+    avatar: "",
+    siteUrl: "https://your-domain.com/",
 }
 
 // Header Section
@@ -30,47 +30,32 @@ export const headerConfig = {
     logotext: "Portfolio.",
     actionButton: {
         text: "Resume",
-        url: "/Chirag Resume.pdf" // use full URL or Public Folder path
+        url: "/Alok_Resume.pdf" // use full URL or Public Folder path
     },
 }
 
 // Hero Section
 export const heroConfig = {
     salutation: "Hi👋🏻 My name is",
-    firstName: "Chirag.",
-    lastName: "",
-    position: "Fullstack Software Engineer",
+    firstName: "Alok",
+    lastName: "Singh.",
+    position: "Software Developer",
     tagLine: {
-        prefixText: "I create",
-        highlightedText: "Exciting Stuff",
-        suffixText: "on the Internet."
+        prefixText: "I build",
+        highlightedText: "AI-integrated",
+        suffixText: "Applications."
     },
     avatar: Avatar_180,
     links: [
         {
             label: "GitHub",
-            url: "https://github.com/ChiragChrg",
+            url: "https://github.com/3107Alok",
             icon: GithubIconRaw
         },
         {
             label: "LinkedIn",
-            url: "https://www.linkedin.com/in/chiragchrg/",
+            url: "https://www.linkedin.com/in/alok-singh-86688a315/",
             icon: LinkedinIconRaw
-        },
-        {
-            label: "X",
-            url: "https://x.com/ChiragChrg",
-            icon: TwitterIconRaw
-        },
-        {
-            label: "Instagram",
-            url: "https://www.instagram.com/chiragchrg/",
-            icon: InstagramIconRaw
-        },
-        {
-            label: "Google Search",
-            url: "https://www.google.com/search?q=ChiragChrg",
-            icon: GoogleIconRaw
         }
     ],
 }
@@ -79,50 +64,29 @@ export const heroConfig = {
 export const aboutConfig = {
     aboutAvatar: Avatar_250,
     description: [
-        "Hey there! 👋🏻 I'm Chirag. I build things on the internet — with a strong focus on performance, interactivity, and getting the details right.",
-        "I enjoy working on systems that aren’t static. Real-time updates, complex UIs, and applications with lots of moving parts. I naturally go deeper into problems — optimizing, refining, and chasing that \"this feels right\" moment.",
-        "I like pushing systems to their limits, understanding how they behave, and improving them to be faster, cleaner, and more reliable.",
-        "If you're building something interesting, challenging, or technically demanding… I’d love to be part of it 😄"
+        "Hey there! I'm Alok Singh, a 3rd year Computer Science undergraduate at Krishna Institute of Engineering and Technology (KIET).",
+        "I am skilled in Flutter, Python, and serverless AWS architectures. I have hands-on experience building full-stack, AI-integrated applications across healthcare, education, and cloud platforms.",
+        "I have a strong foundation in Data Structures, System Design, and REST API development.",
+        "I enjoy solving complex problems and exploring Machine Learning, striving to create impactful digital experiences."
     ],
 }
 
 // Footer Section
 export const footerConfig = {
     logo: LogoIcon,
-    title: "ChiragChrg | Portfolio.",
+    title: "Alok Singh | Portfolio.",
     links: [
         {
             label: "GitHub",
-            url: "https://github.com/ChiragChrg",
+            url: "https://github.com/3107Alok",
             icon: GithubIconRaw
         },
         {
             label: "LinkedIn",
-            url: "https://www.linkedin.com/in/chiragchrg/",
+            url: "https://www.linkedin.com/in/alok-singh-86688a315/",
             icon: LinkedinIconRaw
-        },
-        {
-            label: "X",
-            url: "https://x.com/ChiragChrg",
-            icon: TwitterIconRaw
-        },
-        {
-            label: "Instagram",
-            url: "https://www.instagram.com/chiragchrg/",
-            icon: InstagramIconRaw
-        },
-        {
-            label: "Discord",
-            url: "https://discord.gg/WmVQjMryDz",
-            icon: DiscordIconRaw
-        },
-        {
-            label: "Google Search",
-            url: "https://www.google.com/search?q=ChiragChrg",
-            icon: GoogleIconRaw
         }
     ],
-    copyrightText: `© Copyright 2023-${new Date().getFullYear()
-        } ChiragChrg`
+    copyrightText: `© Copyright ${new Date().getFullYear()} Alok Singh`
 }
 

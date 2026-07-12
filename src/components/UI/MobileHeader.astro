@@ -1,11 +1,7 @@
 ---
 import { Download } from 'lucide-preact';
-import ThemeButton from '@/components/UI/ThemeButton.astro';
-import ThemeDropdown from '@/components/UI/ThemeDropdown.astro';
-
+import ThemeDropdown from './ThemeDropdown.astro';
 const { config } = Astro.props;
-
-const showThemeDropdown = import.meta.env.PUBLIC_SHOW_THEME_MENU === 'true';
 ---
 
 <header class="lg:hidden w-full sticky top-0 z-50 headerGradient backdrop-blur-[2px]">
@@ -13,12 +9,8 @@ const showThemeDropdown = import.meta.env.PUBLIC_SHOW_THEME_MENU === 'true';
         <a href="#home" class="Fade_In font-satisfy font-bold text-[2em]">
             <span class="gradientText w-fit">{config.logotext}</span>
         </a>
-
         <div class="flex items-center gap-4">
-            {showThemeDropdown && <ThemeDropdown className="Fade_In" idPrefix="Mobile" />}
-
-            <ThemeButton className="Fade_In" />
-
+            <ThemeDropdown idPrefix="Mobile" />
             <button id="Ham_Menu" aria-label="Toggle Menu">
                 <svg
                     viewBox="20 20 60 60"
@@ -50,6 +42,10 @@ const showThemeDropdown = import.meta.env.PUBLIC_SHOW_THEME_MENU === 'true';
     >
         <!-- Translucent blurry background -->
         <div class="absolute inset-0 bg-background/50 backdrop-blur -z-10"></div>
+
+        <div class="MobileHeader_Nav flex_center opacity-0 translate-y-4">
+            <a href="#home">Home</a>
+        </div>
 
         <div class="MobileHeader_Nav flex_center opacity-0 translate-y-4">
             <a href="#about">About</a>
