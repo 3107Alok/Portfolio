@@ -85,18 +85,6 @@ export const FrontendStack = [
         icon: SKILLS.CssIcon,
         link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
     },
-    {
-        name: "React.js",
-        description: "JavaScript library for building user interfaces with reusable components.",
-        icon: SKILLS.ReactIcon,
-        link: "https://react.dev/",
-    },
-    {
-        name: "Next.js",
-        description: "React framework for server-side rendering, static site generation, and SEO optimization.",
-        icon: SKILLS.NextIcon,
-        link: "https://nextjs.org/",
-    },
 ] as const;
 
 // 4. Backend
@@ -106,12 +94,6 @@ export const BackendStack = [
         description: "A micro web framework written in Python, designed to make getting started quick and easy.",
         icon: SKILLS.FlaskIcon,
         link: "https://flask.palletsprojects.com/",
-    },
-    {
-        name: "Node.js",
-        description: "JavaScript runtime for building scalable and performant backend server applications.",
-        icon: SKILLS.NodeIcon,
-        link: "https://nodejs.org/",
     },
     {
         name: "REST API",
