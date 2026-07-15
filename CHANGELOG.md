@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0](https://github.com/3107Alok/Portfolio/compare/v1.1.1...v1.2.0) (2026-07-15)
+
+### ✨ Features
+
+* keep only github repository button in project modals ([6af8c3d](https://github.com/3107Alok/Portfolio/commit/6af8c3d45c9a6875d45389be41e1926aba581554))
+
 ## [1.1.1](https://github.com/3107Alok/Portfolio/compare/v1.1.0...v1.1.1) (2026-07-15)
 
 ### 🐛 Bug Fixes
