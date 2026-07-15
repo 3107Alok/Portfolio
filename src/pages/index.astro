@@ -1,6 +1,6 @@
 ---
 import { Layout } from '@layouts/index';
-import { Hero, About, Skills, Projects, Contact } from '@components/index';
+import { Hero, About, Skills, Projects, Certifications, Contact } from '@components/index';
 
 const { themeConfig, siteConfig, headerConfig, heroConfig, aboutConfig, footerConfig } =
     await import('@/config/portfolio.config');
@@ -18,5 +18,6 @@ const { themeConfig, siteConfig, headerConfig, heroConfig, aboutConfig, footerCo
     <About config={aboutConfig} />
     <Skills />
     <Projects />
+    <Certifications />
     <Contact />
 </Layout>

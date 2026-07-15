@@ -38,6 +38,11 @@ import EduNexShot4 from "./Edunex_shot4.png"
 import EduNexShot5 from "./Edunex_shot5.png"
 import EduNexShot6 from "./Edunex_shot6.png"
 import BioScanAI from "./BioScan AI.png"
+import AWSAIPractitioner from "./AWS AI Practioner.png"
+import AWSCloudPractitioner from "./AWS Cloud Practioner.png"
+import AWSDataEnggAssociate from "./AWS Data Engg. Assoc.png"
+import InfosysSpringboardFlutter from "./InfosysSpringboard Mobile App Dev.png"
+import PearsonMeproLevel7 from "./PearsonMepro Level7.png"
 
 export default {
     // MedVerse
@@ -80,4 +85,9 @@ export default {
     EduNexShot5,
     EduNexShot6,
     BioScanAI,
+    AWSAIPractitioner,
+    AWSCloudPractitioner,
+    AWSDataEnggAssociate,
+    InfosysSpringboardFlutter,
+    PearsonMeproLevel7,
 };
