@@ -517,7 +517,7 @@ export const PROJECTS_LIST: IProject[] = [
         theme: "#f59e0b", // Warm Amber theme matching plant health diagnostics / orange status badge
         status: "completed",
         liveUrl: "",
-        sourceUrl: "https://github.com/3107Alok/BioScan-AI",
+        sourceUrl: "https://github.com/Aditsharma12/SIH-project",
         downloadUrl: "",
         role: "IoT Development & System Planning (Team Project)",
         duration: "January 2026 – March 2026",
