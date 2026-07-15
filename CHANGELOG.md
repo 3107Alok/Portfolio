@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0](https://github.com/3107Alok/Portfolio/compare/v1.0.0...v1.1.0) (2026-07-15)
+
+### ✨ Features
+
+* add BioScan AI project with amber AI/ML + IoT platform badge ([136f3ea](https://github.com/3107Alok/Portfolio/commit/136f3ea7c10f8565f0477bf0cbde39b6658e3bfa))
+
 ## 1.0.0 (2026-07-15)
 
 ### ⚠ BREAKING CHANGES
