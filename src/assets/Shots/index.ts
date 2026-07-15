@@ -37,6 +37,7 @@ import EduNexShot3 from "./Edunex_shot3.png"
 import EduNexShot4 from "./Edunex_shot4.png"
 import EduNexShot5 from "./Edunex_shot5.png"
 import EduNexShot6 from "./Edunex_shot6.png"
+import BioScanAI from "./BioScan AI.png"
 
 export default {
     // MedVerse
@@ -78,4 +79,5 @@ export default {
     EduNexShot4,
     EduNexShot5,
     EduNexShot6,
+    BioScanAI,
 };

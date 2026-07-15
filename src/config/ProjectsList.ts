@@ -505,6 +505,78 @@ export const PROJECTS_LIST: IProject[] = [
         improvements: "Automated OCR notes-to-text summaries | PDF document download tracker | Push notifications for new unit uploads | Offline access using Service Workers | Integrated study groups and discussion forums under subjects",
         logoSize: 55,
         versions: []
+    },
+    {
+        isHidden: false,
+        name: "BioScan AI",
+        shortDescription: "An IoT-enabled plant health monitoring system that analyzes leaf conditions using computer vision techniques to estimate plant health, tissue damage, and surface coverage in real time.",
+        description: "BioScan AI is a smart agriculture project developed to assist in early plant health monitoring using computer vision and IoT. The system captures live leaf images through a Raspberry Pi camera, processes them using OpenCV-based image analysis, and estimates plant health, damage percentage, and leaf coverage in real time. A lightweight Flask backend handles image processing while the web interface displays the processed video stream and live analysis results.",
+        logoImage: LOGOS.ClimateLogo, // Matches climate/plant/agriculture theme!
+        previewImage: SCREENSHOTS.BioScanAI,
+        deviceMockupImage: MOCKUPS.ARMSv3Mockup, // Browser mockup for Flask web portal
+        theme: "#f59e0b", // Warm Amber theme matching plant health diagnostics / orange status badge
+        status: "completed",
+        liveUrl: "",
+        sourceUrl: "https://github.com/3107Alok/BioScan-AI",
+        downloadUrl: "",
+        role: "IoT Development & System Planning (Team Project)",
+        duration: "January 2026 – March 2026",
+        platform: "Web + Raspberry Pi (IoT)",
+        screenshots: [
+            SCREENSHOTS.BioScanAI
+        ],
+        technologies: [
+            TECH_STACK.Python,
+            TECH_STACK.Flask,
+            {
+                title: "OpenCV",
+                description: "Open-source computer vision library for image processing and leaf analysis.",
+                icon: TECH_STACK.ComputerVision.icon
+            },
+            {
+                title: "NumPy",
+                description: "Scientific computing library for multidimensional array processing of image pixels.",
+                icon: TECH_STACK.Python.icon
+            },
+            {
+                title: "Raspberry Pi",
+                description: "Edge-computing single-board computer for video stream acquisition and system orchestration.",
+                icon: TECH_STACK.VSCode.icon
+            },
+            TECH_STACK.HTML,
+            TECH_STACK.CSS,
+            TECH_STACK.JavaScript
+        ],
+        features: [
+            {
+                title: "Real-Time Plant Analysis",
+                description: "Captures live leaf images and analyzes plant health in real time."
+            },
+            {
+                title: "Computer Vision Processing",
+                description: "Detects leaf regions and estimates health, tissue damage, and surface coverage using OpenCV."
+            },
+            {
+                title: "Raspberry Pi Integration",
+                description: "Runs on Raspberry Pi with a connected camera module for edge-based image acquisition."
+            },
+            {
+                title: "Live Camera Streaming",
+                description: "Streams processed camera output with visual overlays through a Flask web application."
+            },
+            {
+                title: "Health Classification",
+                description: "Displays plant condition as Healthy, Moderate, Damaged, or No Plant Detected."
+            },
+            {
+                title: "Lightweight Web Interface",
+                description: "Provides a simple browser-based interface for live monitoring and analysis."
+            }
+        ],
+        challenges: "Integrating Raspberry Pi camera with the web application | Optimizing OpenCV image processing for real-time analysis | Handling varying lighting conditions during leaf detection | Building a lightweight Flask-based processing pipeline",
+        improvements: "Deep Learning-based Disease Detection | Mobile Application Integration | Cloud Monitoring Dashboard | Multi-Plant Detection | Environmental Sensor Integration | Historical Health Reports | Smart Irrigation Integration",
+        logoSize: 55,
+        versions: []
     }
 ];
 //#endregion Projects List
