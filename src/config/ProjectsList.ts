@@ -453,7 +453,7 @@ export const PROJECTS_LIST: IProject[] = [
         sourceUrl: "https://github.com/3107Alok/EduNex",
         downloadUrl: "",
         role: "Full Stack Developer (Solo)",
-        duration: "July 2026",
+        duration: "March 2026 – April 2026",
         platform: "Web (Responsive Desktop & Mobile)",
         screenshots: [
             SCREENSHOTS.EduNexShot1,
