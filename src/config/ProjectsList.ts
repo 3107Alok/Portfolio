@@ -334,6 +334,110 @@ export const PROJECTS_LIST: IProject[] = [
         improvements: "GST Reports & Tax Filing | Inventory Stock Alerts | Supplier & Purchase Management | Customer Credit (Khata) System | Sales Dashboard with Charts | Expense Management | Multi-Store Support | UPI Payment Verification | Business Insights using AI",
         logoSize: 55,
         versions: []
+    },
+    {
+        isHidden: false,
+        name: "AttendX",
+        shortDescription: "An AI-powered smart attendance management application that enables faculty to register students, automate attendance using face recognition, and monitor attendance records through interactive dashboards and student analytics.",
+        description: "AttendX is a modern smart attendance solution built for educational institutions to simplify classroom attendance using on-device AI face recognition. The application allows faculty to enroll students, conduct attendance sessions, manage student records, and monitor attendance statistics through an intuitive dashboard. Built with Flutter, Firebase, TensorFlow Lite, and Google ML Kit, AttendX combines secure authentication, intelligent face recognition, and real-time attendance management into a clean cross-platform application.",
+        logoImage: LOGOS.ArmsLogo,
+        previewImage: SCREENSHOTS.AttendXMainpage,
+        deviceMockupImage: MOCKUPS.VortexaMockup,
+        theme: "#a855f7",
+        status: "completed",
+        liveUrl: "",
+        sourceUrl: "https://github.com/3107Alok/AttendX",
+        downloadUrl: "YOUR_GOOGLE_DRIVE_LINK_HERE",
+        role: "Full Stack Developer (Solo)",
+        duration: "July 2026",
+        platform: "Cross-Platform (Flutter)",
+        screenshots: [
+            SCREENSHOTS.AttendXShot1,
+            SCREENSHOTS.AttendXShot2,
+            SCREENSHOTS.AttendXShot3,
+            SCREENSHOTS.AttendXShot4,
+            SCREENSHOTS.AttendXShot5,
+            SCREENSHOTS.AttendXShot6,
+            SCREENSHOTS.AttendXShot7
+        ],
+        technologies: [
+            TECH_STACK.Flutter,
+            TECH_STACK.Dart,
+            {
+                title: "BLoC",
+                description: "Business Logic Component state management pattern for predictable state transitions.",
+                icon: TECH_STACK.Flutter.icon
+            },
+            {
+                title: "Clean Architecture",
+                description: "Separation of concerns architecture with Domain, Data, and Presentation layers.",
+                icon: TECH_STACK.VSCode.icon
+            },
+            TECH_STACK.Firebase,
+            TECH_STACK.Firestore,
+            {
+                title: "TensorFlow Lite",
+                description: "On-device machine learning inference for running facial embedding models.",
+                icon: TECH_STACK.tflite.icon
+            },
+            {
+                title: "Google ML Kit",
+                description: "On-device APIs for face detection and contour tracking.",
+                icon: TECH_STACK.ComputerVision.icon
+            },
+            {
+                title: "Face Recognition",
+                description: "Facial embedding extraction and Euclidean distance matching for user identification.",
+                icon: TECH_STACK.ComputerVision.icon
+            },
+            TECH_STACK.RESTAPI
+        ],
+        features: [
+            {
+                title: "AI Face Recognition",
+                description: "On-device facial recognition using TensorFlow Lite and Google ML Kit for fast and secure attendance marking."
+            },
+            {
+                title: "Student Enrollment",
+                description: "Register students with profile details and facial data for accurate recognition."
+            },
+            {
+                title: "Automated Attendance",
+                description: "Start attendance sessions, scan faces in real time, and automatically mark attendance while preventing duplicate entries."
+            },
+            {
+                title: "Attendance Dashboard",
+                description: "View today's attendance, enrolled students, weekly attendance trends, and attendance summaries."
+            },
+            {
+                title: "Student Management",
+                description: "Search, edit, delete, and manage student records with semester and section filters."
+            },
+            {
+                title: "Student Attendance History",
+                description: "Track individual attendance percentage and detailed attendance history for every student."
+            },
+            {
+                title: "Secure Authentication",
+                description: "Firebase Authentication with Email/Password, Google Sign-In, password recovery, and persistent login sessions."
+            },
+            {
+                title: "Cloud Database",
+                description: "Store student information and attendance records securely using Firebase Cloud Firestore."
+            },
+            {
+                title: "Attendance Reports",
+                description: "Generate daily attendance reports with present/absent statistics and historical attendance records."
+            },
+            {
+                title: "Faculty Profile",
+                description: "Manage faculty information including college, department, email, and account settings."
+            }
+        ],
+        challenges: "Implementing fast on-device face recognition with TensorFlow Lite | Optimizing continuous face scanning for smooth attendance sessions | Preventing duplicate attendance entries during live scanning | Managing real-time attendance synchronization with Firebase Firestore | Building a scalable architecture using BLoC and Clean Architecture",
+        improvements: "Liveness Detection (Anti-Spoofing) | QR-based Student Attendance | CSV/PDF Attendance Export | Cloud Backup | Push Notifications | Advanced Attendance Analytics | Parent Portal",
+        logoSize: 55,
+        versions: []
     }
 ];
 //#endregion Projects List
