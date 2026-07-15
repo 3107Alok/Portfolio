@@ -349,7 +349,7 @@ export const PROJECTS_LIST: IProject[] = [
         sourceUrl: "https://github.com/3107Alok/AttendX",
         downloadUrl: "YOUR_GOOGLE_DRIVE_LINK_HERE",
         role: "Full Stack Developer (Solo)",
-        duration: "July 2026",
+        duration: "February 2026 – April 2026",
         platform: "Cross-Platform (Flutter)",
         screenshots: [
             SCREENSHOTS.AttendXShot1,
