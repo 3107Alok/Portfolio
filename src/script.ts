@@ -609,6 +609,22 @@ function initProjectModal() {
                 if (primaryUrl) {
                     liveLink.href = primaryUrl;
                     liveLink.classList.remove("hidden");
+                    
+                    const isAppButton = (project.downloadUrl && project.downloadUrl.trim() !== "" && primaryUrl === project.downloadUrl);
+                    
+                    const spanEl = liveLink.querySelector("span");
+                    if (spanEl) {
+                        spanEl.textContent = isAppButton ? "Download APK" : "Visit Website";
+                    }
+                    
+                    const svgContainer = liveLink.querySelector("svg");
+                    if (svgContainer) {
+                        if (isAppButton) {
+                            svgContainer.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />`;
+                        } else {
+                            svgContainer.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />`;
+                        }
+                    }
                 }
             }
             if (sourceLink) {

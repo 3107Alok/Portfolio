@@ -449,7 +449,7 @@ export const PROJECTS_LIST: IProject[] = [
         deviceMockupImage: MOCKUPS.ARMSv3Mockup,
         theme: "#a855f7",
         status: "completed",
-        liveUrl: "",
+        liveUrl: "https://github.com/3107Alok/EduNex",
         sourceUrl: "https://github.com/3107Alok/EduNex",
         downloadUrl: "",
         role: "Full Stack Developer (Solo)",
