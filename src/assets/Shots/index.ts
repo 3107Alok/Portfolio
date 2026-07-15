@@ -23,6 +23,16 @@ import MedVerseShot5 from "./medverse_shot5.jpeg"
 import MedVerseShot6 from "./medverse_shot6.jpeg"
 import MedVerseShot7 from "./medverse_shot7.jpeg"
 import MedVerseShot8 from "./medverse_shot8.jpeg"
+import InvoxaMainpage from "./invoxa_mainpage.png"
+import InvoxaShot2 from "./invoxa_shot2.jpeg"
+import InvoxaShot3 from "./invoxa_shot3.jpeg"
+import InvoxaShot4 from "./invoxa_shot4.jpeg"
+import InvoxaShot5 from "./invoxa_shot5.jpeg"
+import InvoxaShot7 from "./invoxa_shot7.jpeg"
+import InvoxaShot8 from "./invoxa_shot8.jpeg"
+import InvoxaShot9 from "./invoxa_shot9.jpeg"
+import InvoxaShot10 from "./invoxa_shot10.jpeg"
+import InvoxaShot11 from "./invoxa_shot11.jpeg"
 
 export default {
     KalciShots,
@@ -50,4 +60,14 @@ export default {
     MedVerseShot6,
     MedVerseShot7,
     MedVerseShot8,
+    InvoxaMainpage,
+    InvoxaShot2,
+    InvoxaShot3,
+    InvoxaShot4,
+    InvoxaShot5,
+    InvoxaShot7,
+    InvoxaShot8,
+    InvoxaShot9,
+    InvoxaShot10,
+    InvoxaShot11,
 };

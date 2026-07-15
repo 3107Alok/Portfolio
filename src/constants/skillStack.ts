@@ -11,6 +11,12 @@ export interface ISkill {
 // 1. Programming Languages
 export const ProgrammingLanguagesStack = [
     {
+        name: "C++",
+        description: "General-purpose programming language with support for high-performance applications.",
+        icon: SKILLS.CppIcon,
+        link: "https://isocpp.org/",
+    },
+    {
         name: "Java",
         description: "Object-oriented programming language widely used for Android, enterprise, and backend applications.",
         icon: SKILLS.JavaIcon,
@@ -28,12 +34,7 @@ export const ProgrammingLanguagesStack = [
         icon: SKILLS.PythonIcon,
         link: "https://www.python.org/",
     },
-    {
-        name: "C++",
-        description: "General-purpose programming language with support for high-performance applications.",
-        icon: SKILLS.CppIcon,
-        link: "https://isocpp.org/",
-    },
+
     {
         name: "Dart",
         description: "Client-optimized programming language for fast apps on any platform, developed by Google.",

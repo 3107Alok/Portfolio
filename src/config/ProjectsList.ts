@@ -184,8 +184,7 @@ export const PROJECTS_LIST: IProject[] = [
             TECH_STACK.Firestore,
             TECH_STACK.MongoDB,
             TECH_STACK.RESTAPI,
-            TECH_STACK.Render,
-            TECH_STACK.Antigravity
+            TECH_STACK.Render
         ],
         features: [
             {
@@ -232,43 +231,107 @@ export const PROJECTS_LIST: IProject[] = [
     },
     {
         isHidden: false,
-        name: "LecTrack PYQ",
-        shortDescription: "A central web platform to access college PYQs (Previous Year Questions) dynamically for AKTU/CT/PUE examinations.",
-        description: "LecTrack PYQ is a highly structured database application built for KIET college students to find and fetch Previous Year Questions. It contains filters for subject names, departments, and specific exam types (like Sessional CT or University AKTU exams). The application is optimized for quick search and download requests, resolving academic material discoverability.",
-        logoImage: LOGOS.ArmsLogo,
-        previewImage: SCREENSHOTS.Armsv1Shots,
-        deviceMockupImage: MOCKUPS.ARMSv3Mockup,
-        theme: "#9333ea",
+        name: "Invoxa",
+        shortDescription: "A full-stack offline-first billing and inventory management application built for local retailers. Invoxa enables fast barcode-based billing, inventory management, professional invoice generation, and secure cloud backup while ensuring uninterrupted offline operations.",
+        description: "Invoxa is an offline-first billing solution designed for small businesses and local shopkeepers who need a fast, reliable, and easy-to-use billing system. The application uses Hive as the primary local database, allowing all billing operations to continue seamlessly even without an internet connection. When connectivity is restored, data is securely synchronized with Firebase Cloud Firestore in the background.\n\nThe platform combines barcode scanning, inventory management, customer billing, PDF invoice generation, sales analytics, and secure authentication into a production-style Flutter application following Clean Architecture and the BLoC state management pattern.",
+        logoImage: LOGOS.VortexaLogo,
+        previewImage: SCREENSHOTS.InvoxaMainpage,
+        deviceMockupImage: MOCKUPS.VortexaMockup,
+        theme: "#6366f1",
         status: "completed",
-        liveUrl: "https://lec-track-pink.vercel.app",
-        sourceUrl: "https://github.com/3107Alok/LecTrack",
-        role: "Solo",
-        duration: "2 Months",
-        platform: "Web",
+        liveUrl: "",
+        sourceUrl: "https://github.com/3107Alok/Invoxa",
+        downloadUrl: "YOUR_GOOGLE_DRIVE_LINK_HERE",
+        role: "Full Stack Developer (Solo)",
+        duration: "July 2026",
+        platform: "Cross-Platform (Flutter)",
         screenshots: [
-            SCREENSHOTS.Armsv1Shots,
-            SCREENSHOTS.Armsv2Shots,
-            SCREENSHOTS.Armsv3Shots
+            SCREENSHOTS.InvoxaShot2,
+            SCREENSHOTS.InvoxaShot3,
+            SCREENSHOTS.InvoxaShot4,
+            SCREENSHOTS.InvoxaShot5,
+            SCREENSHOTS.InvoxaShot7,
+            SCREENSHOTS.InvoxaShot8,
+            SCREENSHOTS.InvoxaShot9,
+            SCREENSHOTS.InvoxaShot10,
+            SCREENSHOTS.InvoxaShot11
         ],
         technologies: [
-            TECH_STACK.Reactjs,
-            TECH_STACK.Nodejs,
-            TECH_STACK.MySQL,
-            TECH_STACK.HTML,
-            TECH_STACK.CSS
+            TECH_STACK.Flutter,
+            TECH_STACK.Dart,
+            {
+                title: "BLoC",
+                description: "Business Logic Component state management pattern for predictable state transitions.",
+                icon: TECH_STACK.Flutter.icon
+            },
+            {
+                title: "Clean Architecture",
+                description: "Separation of concerns architecture with Domain, Data, and Presentation layers.",
+                icon: TECH_STACK.VSCode.icon
+            },
+            {
+                title: "Hive",
+                description: "Lightweight and blazing fast key-value database written in pure Dart for offline storage.",
+                icon: TECH_STACK.SQLite.icon
+            },
+            TECH_STACK.Firebase,
+            TECH_STACK.Firestore,
+            {
+                title: "Google ML Kit",
+                description: "On-device Machine Learning APIs for barcode scanning and QR code processing.",
+                icon: TECH_STACK.ComputerVision.icon
+            },
+            {
+                title: "Firebase Cloud Sync",
+                description: "Background synchronization between local Hive database and Cloud Firestore.",
+                icon: TECH_STACK.Firebase.icon
+            },
+            TECH_STACK.RESTAPI
         ],
         features: [
             {
-                title: "Live Filter Search",
-                description: "Instantly sort exam files by typing subject name or department codes."
+                title: "Offline-First Billing",
+                description: "Complete billing workflow works entirely offline using Hive as the primary local database."
             },
             {
-                title: "Secure PDF Storage",
-                description: "Secure, reliable hosting of PDF question papers for quick fetch latency."
+                title: "Barcode Scanner",
+                description: "Fast barcode scanning with Google ML Kit including smart duplicate detection and quantity auto-increment."
             },
-            COMMON_FEATURES.Responsive,
-            COMMON_FEATURES.SEO
+            {
+                title: "Inventory Management",
+                description: "Manage barcode and non-barcode products with editing, searching, sorting, and stock organization."
+            },
+            {
+                title: "Professional PDF Invoices",
+                description: "Generate clean invoice PDFs with shop branding, GST details, customer information, payment QR, and printable layouts."
+            },
+            {
+                title: "Automatic QR Processing",
+                description: "Automatically detects, crops, compresses, and stores payment QR codes using on-device ML Kit without requiring internet."
+            },
+            {
+                title: "Secure Authentication",
+                description: "Firebase Authentication with Email/Password, Google Sign-In, password recovery, and persistent sessions."
+            },
+            {
+                title: "Background Cloud Sync",
+                description: "Automatically synchronizes products, bills, and shop profile to Cloud Firestore without interrupting the user experience."
+            },
+            {
+                title: "Shop Profile Management",
+                description: "Manage business information, GST number, payment QR, logos, business hours, and store branding."
+            },
+            {
+                title: "Sales Analytics & Billing History",
+                description: "Track daily revenue, invoices, billing history, and business performance through a clean analytics dashboard."
+            },
+            {
+                title: "Multi-Device Backup",
+                description: "Securely restore products, shop information, and billing history after logging into another device."
+            }
         ],
+        challenges: "Designing a robust offline-first synchronization strategy between local Hive DB and Cloud Firestore | Optimizing Google ML Kit barcode scanner for fast, continuous scans without UI freezing | Implementing automated on-device payment QR code detection, cropping, and local processing | Generating pixel-perfect PDF invoices matching standard receipt printer dimensions | Maintaining a scalable state architecture with BLoC and Clean Architecture patterns",
+        improvements: "GST Reports & Tax Filing | Inventory Stock Alerts | Supplier & Purchase Management | Customer Credit (Khata) System | Sales Dashboard with Charts | Expense Management | Multi-Store Support | UPI Payment Verification | Business Insights using AI",
         logoSize: 55,
         versions: []
     }

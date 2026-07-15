@@ -1,8 +1,9 @@
 // Programming Languages
+import CppIcon from "./cpp.svg";
 import JavaIcon from "./java.svg";
 import JsIcon from "./javascript.svg";
 import PythonIcon from "./python.svg";
-import CppIcon from "./cpp.svg";
+
 import DartIcon from "./dart.svg";
 
 // Android Development
@@ -30,8 +31,7 @@ import FirebaseIcon from "./firebase.svg";
 // Cloud
 import VercelIcon from "./vercel.svg";
 import RenderIcon from "./render.svg";
-import AwsIcon from "./aws-logo.svg";
-import AwsS3Icon from "./aws-s3.svg";
+import AwsIcon from "./amazon-aws.svg";
 
 // Tools
 import GitIcon from "./git.svg";
@@ -47,7 +47,10 @@ import NumpyIcon from "./numpy.svg";
 import CvIcon from "./computer-vision.svg";
 import EarthEngineIcon from "./google-earth-engine.svg";
 
+import AwsS3Icon from "./aws-s3.svg";
+
 export default {
+    AwsS3Icon,
     JavaIcon,
     JsIcon,
     PythonIcon,
@@ -70,7 +73,6 @@ export default {
     VercelIcon,
     RenderIcon,
     AwsIcon,
-    AwsS3Icon,
     GitIcon,
     GithubIcon,
     VsCodeIcon,
