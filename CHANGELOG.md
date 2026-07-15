@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.0](https://github.com/3107Alok/Portfolio/compare/v1.2.1...v1.3.0) (2026-07-15)
+
+### ✨ Features
+
+* add Certifications section with 5 credentials and lightbox preview ([2d230a7](https://github.com/3107Alok/Portfolio/commit/2d230a7c27ed81c88cc26611d083e9f441aa6d0a))
+* adjust cert card size, click preview, and nav links ([b6a619c](https://github.com/3107Alok/Portfolio/commit/b6a619cc370fc32dec75856ebd13d35fcfd9526e))
+* restore larger 3-column cert cards layout for better readability ([658ac83](https://github.com/3107Alok/Portfolio/commit/658ac839b7f5fc0931a376de6bb9ad58f61e262d))
+
 ## [1.2.1](https://github.com/3107Alok/Portfolio/compare/v1.2.0...v1.2.1) (2026-07-15)
 
 ### 🐛 Bug Fixes
