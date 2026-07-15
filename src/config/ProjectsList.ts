@@ -234,7 +234,7 @@ export const PROJECTS_LIST: IProject[] = [
         name: "Invoxa",
         shortDescription: "A full-stack offline-first billing and inventory management application built for local retailers. Invoxa enables fast barcode-based billing, inventory management, professional invoice generation, and secure cloud backup while ensuring uninterrupted offline operations.",
         description: "Invoxa is an offline-first billing solution designed for small businesses and local shopkeepers who need a fast, reliable, and easy-to-use billing system. The application uses Hive as the primary local database, allowing all billing operations to continue seamlessly even without an internet connection. When connectivity is restored, data is securely synchronized with Firebase Cloud Firestore in the background.\n\nThe platform combines barcode scanning, inventory management, customer billing, PDF invoice generation, sales analytics, and secure authentication into a production-style Flutter application following Clean Architecture and the BLoC state management pattern.",
-        logoImage: LOGOS.VortexaLogo,
+        logoImage: LOGOS.InvoxaLogo,
         previewImage: SCREENSHOTS.InvoxaMainpage,
         deviceMockupImage: MOCKUPS.VortexaMockup,
         theme: "#6366f1",
