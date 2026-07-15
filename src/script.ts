@@ -687,7 +687,11 @@ function initProjectModal() {
             if (carouselInterval) clearInterval(carouselInterval);
 
             // Carousel setup based on platform
-            const isMobile = project.platform.toLowerCase().includes("android") || project.platform.toLowerCase().includes("ios") || project.platform.toLowerCase().includes("flutter") || project.platform.toLowerCase().includes("mobile");
+            const isMobile = (project.platform.toLowerCase().includes("android") || 
+                              project.platform.toLowerCase().includes("ios") || 
+                              project.platform.toLowerCase().includes("flutter") || 
+                              project.platform.toLowerCase().includes("mobile")) && 
+                             !project.platform.toLowerCase().includes("web");
             
             if (browserMockup && phoneMockup) {
                 if (isMobile) {
@@ -703,8 +707,12 @@ function initProjectModal() {
                     
                     // Update URL display in browser frame mockup
                     const urlDisplay = document.getElementById("browser-url-text");
-                    if (urlDisplay && project.liveUrl) {
-                        urlDisplay.textContent = project.liveUrl;
+                    if (urlDisplay) {
+                        urlDisplay.textContent = (project.liveUrl && project.liveUrl.trim() !== "")
+                            ? project.liveUrl
+                            : (project.sourceUrl && project.sourceUrl.trim() !== "")
+                                ? project.sourceUrl
+                                : `https://${project.name.toLowerCase().replaceAll(' ', '')}.com`;
                     }
                 }
             }
