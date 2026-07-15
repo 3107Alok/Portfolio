@@ -30,6 +30,13 @@ import AttendXShot4 from "./AttendX_shot4.jpeg"
 import AttendXShot5 from "./AttendX_shot5.jpeg"
 import AttendXShot6 from "./AttendX_shot6.jpeg"
 import AttendXShot7 from "./AttendX_shot7.jpeg"
+import EduNexMainpage from "./Edunex_mainpage.png"
+import EduNexShot1 from "./Edunex_shot1.png"
+import EduNexShot2 from "./Edunex_shot2.png"
+import EduNexShot3 from "./Edunex_shot3.png"
+import EduNexShot4 from "./Edunex_shot4.png"
+import EduNexShot5 from "./Edunex_shot5.png"
+import EduNexShot6 from "./Edunex_shot6.png"
 
 export default {
     // MedVerse
@@ -64,4 +71,11 @@ export default {
     AttendXShot5,
     AttendXShot6,
     AttendXShot7,
+    EduNexMainpage,
+    EduNexShot1,
+    EduNexShot2,
+    EduNexShot3,
+    EduNexShot4,
+    EduNexShot5,
+    EduNexShot6,
 };

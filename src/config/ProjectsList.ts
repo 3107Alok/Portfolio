@@ -438,6 +438,73 @@ export const PROJECTS_LIST: IProject[] = [
         improvements: "Liveness Detection (Anti-Spoofing) | QR-based Student Attendance | CSV/PDF Attendance Export | Cloud Backup | Push Notifications | Advanced Attendance Analytics | Parent Portal",
         logoSize: 55,
         versions: []
+    },
+    {
+        isHidden: false,
+        name: "EduNex",
+        shortDescription: "An AI-powered secure study resources sharing portal that enables students to access unit-wise notes, previous year question papers (PYQs), and syllabus guidelines, verified automatically using an AI-based check engine.",
+        description: "EduNex is a modern, high-performance study material sharing ecosystem designed for college environments to simplify how students access, upload, and review academic resources. Built using standard HTML5, Vanilla CSS, and JavaScript, it features a premium glassmorphic dark-theme layout. The application integrates secure AWS Cognito authentication, an AI-powered automated syllabus verification workflow (which scans uploaded PDFs to check course alignment before approval), Amazon S3 storage, and a dedicated admin panel for manual overrides and pending file actions.",
+        logoImage: LOGOS.NextmartLogo,
+        previewImage: SCREENSHOTS.EduNexMainpage,
+        deviceMockupImage: MOCKUPS.ARMSv3Mockup,
+        theme: "#a855f7",
+        status: "completed",
+        liveUrl: "",
+        sourceUrl: "https://github.com/3107Alok/EduNex",
+        downloadUrl: "",
+        role: "Full Stack Developer (Solo)",
+        duration: "July 2026",
+        platform: "Web (Responsive Desktop & Mobile)",
+        screenshots: [
+            SCREENSHOTS.EduNexShot1,
+            SCREENSHOTS.EduNexShot2,
+            SCREENSHOTS.EduNexShot3,
+            SCREENSHOTS.EduNexShot4,
+            SCREENSHOTS.EduNexShot5,
+            SCREENSHOTS.EduNexShot6
+        ],
+        technologies: [
+            TECH_STACK.HTML,
+            TECH_STACK.CSS,
+            TECH_STACK.JavaScript,
+            TECH_STACK.AWS,
+            TECH_STACK.AWSS3,
+            TECH_STACK.RESTAPI
+        ],
+        features: [
+            {
+                title: "AI-Powered Syllabus Verification",
+                description: "Scans student-uploaded notes PDFs in real-time, automatically verifying document relevancy against official syllabus units before allowing the upload to complete."
+            },
+            {
+                title: "Academic Resource Filtering",
+                description: "Browse and select study materials, unit notes, and syllabus PDFs sorted by academic year (1st to 4th Year) and subject."
+            },
+            {
+                title: "PYQ Portal",
+                description: "Access organized examination categories (AKTU papers, MSE, ESE, and Question Banks) to facilitate targeted exam preparation."
+            },
+            {
+                title: "Secure Authentication",
+                description: "AWS Cognito integration with JWT validation for secure student login, registration, and administrative group permissions."
+            },
+            {
+                title: "Real-time Progress Tracker",
+                description: "Premium loading modal with real-time text updates showing extraction, analysis, and validation progress during document uploads."
+            },
+            {
+                title: "Admin Approval Workspace",
+                description: "Dedicated interface for admins to review files marked for pending approval, with instantaneous approve/reject controls."
+            },
+            {
+                title: "Responsive Glassmorphic UI",
+                description: "Apple/Linear-inspired dark interface with glowing purple borders, typewriter banners, and breathing status badges that adjust dynamically on mobile."
+            }
+        ],
+        challenges: "Optimizing large PDF file conversions to Base64 on the client side | Synchronizing real-time progress feedback from serverless Lambda functions | Securing admin panel actions using strict Cognito JWT signature verification | Structuring dynamic DOM rendering for nested units and subjects lists while preserving CSS transitions",
+        improvements: "Automated OCR notes-to-text summaries | PDF document download tracker | Push notifications for new unit uploads | Offline access using Service Workers | Integrated study groups and discussion forums under subjects",
+        logoSize: 55,
+        versions: []
     }
 ];
 //#endregion Projects List
