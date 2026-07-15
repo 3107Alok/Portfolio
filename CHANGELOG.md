@@ -2,6 +2,155 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.0.0 (2026-07-15)
+
+### ⚠ BREAKING CHANGES
+
+* 🚀 Release v2 major redesign
+
+### ✨ Features
+
+* :sparkles: Add Husky and Semantic Release dependencies ([389adec](https://github.com/3107Alok/Portfolio/commit/389adeca9cc78c17c344c69f7594d85b9d7fa643))
+* ✨ Add Avatar interaction on Hero section with spring animation on Mouse events ([e099d3f](https://github.com/3107Alok/Portfolio/commit/e099d3f2c44798aa1813ecfd7c52f611987ac5e3))
+* ✨ Add dynamic salutation to Hero section using config ([00eebab](https://github.com/3107Alok/Portfolio/commit/00eebab723f3f83f3d349a051eb9c857dca670f2))
+* ✨ Add Enhanced ProjectCard component for displaying project details and status ([20504d2](https://github.com/3107Alok/Portfolio/commit/20504d238f8a95402c65a8a0350f8f18b7296f99))
+* ✨ Add Netlify secret scan omit keys to environment configuration ([bd83ad0](https://github.com/3107Alok/Portfolio/commit/bd83ad0e331bfef9efdad00c89353ba24242174e))
+* ✨ Add portfolio configuration with personal details and social links ([ff921ac](https://github.com/3107Alok/Portfolio/commit/ff921ac6037469d5c61aa2c57e98a8fe7fb613e4))
+* ✨ Add theme dropdown component and integrate with theme management ([71944fe](https://github.com/3107Alok/Portfolio/commit/71944fecfd34d5d28ba0af1fa51de02c23fb5541))
+* ✨ Adds auto-generated multi-theme CSS support ([d572df3](https://github.com/3107Alok/Portfolio/commit/d572df37c09b42687aa930dce6348165e36ad78a))
+* ✨ Enhance project layout and styling with new status indicators and responsive adjustments ([2eea9e0](https://github.com/3107Alok/Portfolio/commit/2eea9e05ce2db3f58972afb2933b99ba0790e836))
+* ✨ enhance theme management with auto-generated constants ([fa41ef8](https://github.com/3107Alok/Portfolio/commit/fa41ef8bf506511375abadb982a0fbd1dbf06724))
+* ✨ Enhance ThemeDropdown and Header components with idPrefix for better accessibility ([1061a8c](https://github.com/3107Alok/Portfolio/commit/1061a8cee013dba8db171b315d4cc9e2c6311ad7))
+* ✨ Implement buildTechStack function to create technology stack from skills array ([a5bc905](https://github.com/3107Alok/Portfolio/commit/a5bc9053adf6c0c34200396e5994d6db5e670478))
+* ✨ Implement circular expansion animation for mobile menu toggle ([9d98c99](https://github.com/3107Alok/Portfolio/commit/9d98c999108e80b840cd3c02ed9413f366d18950))
+* ✨ Integrate dynamic configuration for components and improve project routing ([15686c9](https://github.com/3107Alok/Portfolio/commit/15686c94e923b8d557d082b44a15a84e9a29989f))
+* ✨ Integrate ProjectCard component and add empty state message for projects ([8cde83d](https://github.com/3107Alok/Portfolio/commit/8cde83deee27ab152e2d446ffe5e30558c592aed))
+* ✨ Integrate site configuration into layout and page components for improved SEO and consistency ([0fd68d1](https://github.com/3107Alok/Portfolio/commit/0fd68d1e1b9a457f11ed8d1aed9d5aca924ee213))
+* ✨ Integrate ThemeDropdown visibility logic in headers based on environment ([e74399a](https://github.com/3107Alok/Portfolio/commit/e74399a906783c421b485574534f0166f4c3603d))
+* ✨ Refactor ThemeButton and MobileHeader for improved theme toggling and accessibility ([b1467df](https://github.com/3107Alok/Portfolio/commit/b1467df109420913aee0144bdaa8dd345a17e325))
+* ✨ Update environment variable handling for development mode in headers ([a574769](https://github.com/3107Alok/Portfolio/commit/a574769dd811ef005bcc72dae8a6905f086819e0))
+* 🚀 Release v2 major redesign ([782da4f](https://github.com/3107Alok/Portfolio/commit/782da4f9b5d2047f9974cb353f997a11adbecb81))
+* add App/Web project badges and fix About section mobile overlap ([899806c](https://github.com/3107Alok/Portfolio/commit/899806c9ded246157cf2a45075cc7444d140211c))
+* add AttendX project and clean up unused project shots ([46fc4a9](https://github.com/3107Alok/Portfolio/commit/46fc4a9b4397af2db57d98d3214e0cb926ba2ca7))
+* add circular transparent AttendX logo ([78020f6](https://github.com/3107Alok/Portfolio/commit/78020f609021b4abb3c11b307a3127c0434167fd))
+* add circular transparent Invoxa logo ([461ed6a](https://github.com/3107Alok/Portfolio/commit/461ed6a3266764e9cd61e164d2003995bb93ffd8))
+* add EduNex project configuration with screenshots and web badge ([4ab1725](https://github.com/3107Alok/Portfolio/commit/4ab172552d0f02f89b529b5c828e0ecdcf2a4af6))
+* add Invoxa project mapping and fix AwsS3Icon build error ([9b44375](https://github.com/3107Alok/Portfolio/commit/9b44375677bf9748df2080645d6c1af2cc09eed6))
+* add MedVerse project, modal redesign, APK download, splash loader, and scroll fixes ([44cedf1](https://github.com/3107Alok/Portfolio/commit/44cedf1c2091e15e23d2ec16b3341ec07217cd4a))
+* add open opportunities availability badge to Hero section ([29e3ead](https://github.com/3107Alok/Portfolio/commit/29e3eadf46d34f9f7c9395b1b18d0b6c33d0dcf5))
+* customize portfolio for Alok Singh, update skills section, and add theme selection ([ffc6dfb](https://github.com/3107Alok/Portfolio/commit/ffc6dfbe07fd5d27690e3c6f2b54233eaf28a682))
+* Improved Button Accessibility for SEO ([a664cd3](https://github.com/3107Alok/Portfolio/commit/a664cd340bb499c53ff7ea069d22568ae1b9927b))
+* save theme in localStorage to maintain theme state across the site ([602b6db](https://github.com/3107Alok/Portfolio/commit/602b6db038b35f6eff3c9149b2d68ca979bd39c7))
+
+### ⭐ Enhancements
+
+*  ⭐Update ESLint configuration for TypeScript support ([82c344d](https://github.com/3107Alok/Portfolio/commit/82c344da15e37e243ac186866e844b247418b646))
+* ⭐ Add aria-labels to social media links for improved accessibility ([a29fc8f](https://github.com/3107Alok/Portfolio/commit/a29fc8f6097c1224bdd3dd93391bafba5344ef28))
+* ⭐ Add ARMS v4 project to project list and refactored ProjectList file structure ([1bc4218](https://github.com/3107Alok/Portfolio/commit/1bc4218a1d5ab20613dfe925a29185463ed9ea9b))
+* ⭐ Add new SVG icons for various skills ([8d8c6a2](https://github.com/3107Alok/Portfolio/commit/8d8c6a2336020a16308c4d625ff51ed15f83a19c))
+* ⭐ Add project list limit and "View All Projects" link for enhanced project display ([06ad1a1](https://github.com/3107Alok/Portfolio/commit/06ad1a19a3f60ff29143e0bac588ccb9509cb0ba))
+* ⭐ Add will-change property to improve background animation performance ([b8cf9eb](https://github.com/3107Alok/Portfolio/commit/b8cf9ebe8a7197e4ce5596aa7602f7e060f59605))
+* ⭐ Change image loading strategy to lazy for improved performance ([e5d7994](https://github.com/3107Alok/Portfolio/commit/e5d7994b21b3f421893fc11805b9d3753e9af1f6))
+* ⭐ Enables theme switching across all headers ([a1dfa9f](https://github.com/3107Alok/Portfolio/commit/a1dfa9fbd8dda4aab6a46ae62cd5336412722fe1))
+* ⭐ Improve GSAP configuration and enhance animation handling for better performance ([e439985](https://github.com/3107Alok/Portfolio/commit/e439985e83c098767e387fb5a12c205d103a8c71))
+* ⭐ Refactors header height usage to avoid repeated DOM queries. ([4c48bf9](https://github.com/3107Alok/Portfolio/commit/4c48bf9ff105c92f94d0449867a2c15ca556ec82))
+* ⭐ Replace Framer Motion icon with Motion icon and add NATS and Render icons ([571030d](https://github.com/3107Alok/Portfolio/commit/571030d1a2e334918c8d8ba6b537ea1cf8c53a53))
+* ⭐ Update commitlint configuration with extended rules for commit message types ([d81eb4e](https://github.com/3107Alok/Portfolio/commit/d81eb4edf54f6aab5cd1548f1f2776fa3f30f57a))
+* ⭐ Update cursor event listeners and comment out transition for performance ([21f35c9](https://github.com/3107Alok/Portfolio/commit/21f35c99b0ec0bf87b5330c120151e48a0694e12))
+* ⭐ Update meta tags for improved SEO and add publisher information ([0a952e6](https://github.com/3107Alok/Portfolio/commit/0a952e63419ac90776b4f58fdceacbc9001a0b64))
+* ⭐ Update ProjectsHeader styles for improved button appearance and add image overlay gradient in global styles ([5b93690](https://github.com/3107Alok/Portfolio/commit/5b936900a5febcf0087504873502aa474739211c))
+* ⭐ Update theme handling and mobile menu animations across components ([75965b3](https://github.com/3107Alok/Portfolio/commit/75965b36c0ca7ce44d99b1b25db5a72a1a9c0ed7))
+
+### 🐛 Bug Fixes
+
+* 🐛 Add missing aria-label to theme dropdown button for accessibility ([a4762df](https://github.com/3107Alok/Portfolio/commit/a4762df045d41c06066877daa2504cd269b28d49))
+* 🐛 Adjust layout and styling in Hero component for better responsiveness ([9588b65](https://github.com/3107Alok/Portfolio/commit/9588b65030468015b8bc17b6e1c323e8fbb3a066))
+* 🐛 Adjust orbit dot positioning and add outline for better visibility ([0ecf74d](https://github.com/3107Alok/Portfolio/commit/0ecf74d10d95f4c6f6e78979ab884f80f55534ce))
+* 🐛 Correct hero section name formatting and re-enable cursor transition effect ([29443a3](https://github.com/3107Alok/Portfolio/commit/29443a3639d14462d5379f9f7b5d2bd2cf72edb7))
+* 🐛 Default to dark theme if no saved theme is found and update default theme name ([3facefd](https://github.com/3107Alok/Portfolio/commit/3facefdf6ae7ef6fc6b4f877fc238fd4e9e72d96))
+* 🐛 Ensures all scroll-triggered animations above the target section finish before initiating smooth scroll, providing a more seamless transition. ([7ca4c15](https://github.com/3107Alok/Portfolio/commit/7ca4c158e201f372062eeecff3dd10a5b769e32b))
+* 🐛 Fix Header nav links underline animation flickering by replacing throttle with debounce function ([e70468f](https://github.com/3107Alok/Portfolio/commit/e70468fd5e3242dc48e726aca57f8b81d297217b))
+* 🐛 https://github.com/ChiragChrg/Portfolio/issues/15 | Resolve header elements fade animation ([af16ca6](https://github.com/3107Alok/Portfolio/commit/af16ca65097e1f94ecfbadc28a53f3dd0fb199cc))
+* 🐛 Improve mobile navigation behavior and state management for inline menu ([5f25a25](https://github.com/3107Alok/Portfolio/commit/5f25a253527778b44d8804a03568f9b9332a379f))
+* 🐛 Resolve issue where duplicate ghosted cursor is created on top left of the screen ([56ed33d](https://github.com/3107Alok/Portfolio/commit/56ed33d95e9332661ebb618d2ce0684ba4be9b58))
+* 🐛 Resolve issue where Resume link in mobile ham menu was not redirecting to the provided url ([edbd7d7](https://github.com/3107Alok/Portfolio/commit/edbd7d78b4c6439a81d63decc87502488f698d66))
+* 🐛 Update mobile header link to include full path for home ([6abfd20](https://github.com/3107Alok/Portfolio/commit/6abfd20ed99b41073eed1b5bb27fdea28c6fac4f))
+* 🐛 Update project header layout and improve menu animations ([9b83f69](https://github.com/3107Alok/Portfolio/commit/9b83f6945b85404a03db0082c1841dc06337f19f))
+* 🐛 Update sitemap URLs and last modified dates for accuracy ([48788c5](https://github.com/3107Alok/Portfolio/commit/48788c57cedbf8c4dacbb49cbac521367ff36c6d))
+* Disable experimental Netlify Adapter to fix SVG bug ([3f9e5b4](https://github.com/3107Alok/Portfolio/commit/3f9e5b4f87dd21bdc6f8a5771e833d3d9376fdb3))
+* Disable experimental Netlify Adapter to fix SVG bug ([3f36628](https://github.com/3107Alok/Portfolio/commit/3f36628ffb0db3ae038c036471eac911e84b1ea1))
+* Disabled SVG compression ([4559381](https://github.com/3107Alok/Portfolio/commit/4559381ae991fd53d53dc2415cd1f0c7155bd6fa))
+* ensure web projects display in browser mockup on modal ([456f6d7](https://github.com/3107Alok/Portfolio/commit/456f6d72ea08a8249c550ec62587b92886288f73))
+
+### ♻️ Code Refactoring
+
+* .♻️ Rename portfolio template config file from `index.ts` to `portfolio.config.ts` ([cd2a06c](https://github.com/3107Alok/Portfolio/commit/cd2a06ce9d3110c7918c12e3cb479e370ff5e66b))
+* ♻️ Add opacity style to avatar image for initial visibility control ([17f59a1](https://github.com/3107Alok/Portfolio/commit/17f59a1cf17c6d2ac00283d3b319816944c8e03e))
+* ♻️ Adds theme system and refactors color variables ([c530e90](https://github.com/3107Alok/Portfolio/commit/c530e901e3ffdd1d0718da074fc0bcd80915f4a7))
+* ♻️ Comment out transition for cursor dot to improve performance ([21bec06](https://github.com/3107Alok/Portfolio/commit/21bec0608f96519a9401d2bc49682b8ca7c48e98))
+* ♻️ Comment out unused ThemeButton imports and theme toggle scripts ([b8cad15](https://github.com/3107Alok/Portfolio/commit/b8cad15345638d9f385a435b916ccb1f6b828eee))
+* ♻️ Create SkillStack constants with detailed descriptions and structured organization ([069773a](https://github.com/3107Alok/Portfolio/commit/069773a11abe92ed4f179c232cf91e3242fa892d))
+* ♻️ Disable Theme Toggle button - Display the website only in Dark mode by default ([1ad0604](https://github.com/3107Alok/Portfolio/commit/1ad0604a54c60b0c8ef4dc4d45f6e0ab7aba9ef8))
+* ♻️ Enhance Astro configuration for improved integration and build options ([dea2e48](https://github.com/3107Alok/Portfolio/commit/dea2e48e6f47a30e775b1408ad683fcd7bab35a2))
+* ♻️ Implement theme toggle functionality in MobileHeader and ThemeButton components ([24e5eee](https://github.com/3107Alok/Portfolio/commit/24e5eee30753bb21b9e7d3ac03e30ad8a832d782))
+* ♻️ Improve theme toggle functionality and enhance theme persistence ([5a90186](https://github.com/3107Alok/Portfolio/commit/5a9018679392b1b5d0dbdd10a7abbd2ed7c7535e))
+* ♻️ Organize GSAP configuration and transitions for better readability and performance ([dae1143](https://github.com/3107Alok/Portfolio/commit/dae1143901bee763f436e2c488f8fc8545aaf13b))
+* ♻️ Rearrange path mappings in tsconfig for improved organization ([f6e7637](https://github.com/3107Alok/Portfolio/commit/f6e7637bcc0d1ef78409026b13f20c07d2e21d41))
+* ♻️ Refactor color variables for social icons and footer styles ([32211b4](https://github.com/3107Alok/Portfolio/commit/32211b4b2ee65a125689d19fc0f5bc8186225902))
+* ♻️ Refactor Hero Section to adapt to tailwind v4 ([b708993](https://github.com/3107Alok/Portfolio/commit/b708993760aeb879d6b8ac239e44b62e2850e0ca))
+* ♻️ Refactor image imports for better asset organization ([0b8fd2d](https://github.com/3107Alok/Portfolio/commit/0b8fd2df0d9c696d9927f401e8e0c5f5a9c56664))
+* ♻️ Refactor Skill section and modified skill categories ([8a1841b](https://github.com/3107Alok/Portfolio/commit/8a1841b4dbf9e39fcab380a8975a9a2837dd147e))
+* ♻️ Remove SCSS preprocessor options from Vite configuration and update lock file ([9247ed3](https://github.com/3107Alok/Portfolio/commit/9247ed33112097066ea3cb5e46f7ece3a6bd489b))
+* ♻️ Rename "State, Data & Realtime" to "State & Events" for clarity ([5066146](https://github.com/3107Alok/Portfolio/commit/5066146efbe28fa3cf13747f1ee58b43e7cdb9f0))
+* ♻️ Rename `/Icons` to `/skills` directory ([a7ddcc4](https://github.com/3107Alok/Portfolio/commit/a7ddcc44db459610eeb2123cbad42c9c226be824))
+* ♻️ Rename utils dir to config and add portfolio config file as index.ts ([ebbf545](https://github.com/3107Alok/Portfolio/commit/ebbf54591f78715604cf70ed4669184881d0892e))
+* ♻️ Revise theme color generation for improved header, skill, and footer styles ([08142a1](https://github.com/3107Alok/Portfolio/commit/08142a15a4a8244a5526dd411b1ca7c96c546d13))
+* ♻️ Simplify theme dropdown visibility logic in headers ([03cc266](https://github.com/3107Alok/Portfolio/commit/03cc26673a7d3977ec8eb8b406ca67c71297d96a))
+* ♻️ Streamline skill stack imports and improve SkillGrid styling ([442f840](https://github.com/3107Alok/Portfolio/commit/442f8401792604a5ecfe88559dbce3e92267104d))
+* ♻️ Update author retrieval to use heroConfig for dynamic name generation ([13d693e](https://github.com/3107Alok/Portfolio/commit/13d693e96e5aa2a3fa0fa3fbb81a2fafe1506b56))
+* ♻️ Update cursor styles to support dynamic background color and improve color handling ([9d991ba](https://github.com/3107Alok/Portfolio/commit/9d991ba0df9a2f3705151ab13f2929667359d040))
+* ♻️ Update environment configuration to enable theme menu visibility ([ee39c24](https://github.com/3107Alok/Portfolio/commit/ee39c24a0edd8d4620cb1e492e293eb7a1bf32ec))
+* ♻️ Update gradient classes for consistency across components ([f8fa25d](https://github.com/3107Alok/Portfolio/commit/f8fa25da967b0a0cbe5680d4f954544f7ae4be97))
+* ♻️ Update import paths to use absolute references for better maintainability ([865d22d](https://github.com/3107Alok/Portfolio/commit/865d22d57cca00acedf6bdd0ccfda52d181f5889))
+* ♻️ Update imports for assets organization in Icons, Logos, Mockups, and Shots ([a0196ec](https://github.com/3107Alok/Portfolio/commit/a0196ec9e14e11dfecd1b79b1296e382d7d639a2))
+* ♻️ Update markdown.svg for improved readability and color consistency ([baff61e](https://github.com/3107Alok/Portfolio/commit/baff61e473cb45f7e1d4069a20ae3eba5ccfe89f))
+* ♻️ Update orbit gradients to support dynamic theme colors based on mode ([6119f6b](https://github.com/3107Alok/Portfolio/commit/6119f6b4255ea7b0fac0a00a05d32705fdf1df30))
+* ♻️ Update project card image opacity and adjust skill gradient colors for improved visibility ([85b3cf5](https://github.com/3107Alok/Portfolio/commit/85b3cf5cef5c1639cf44b0268a79a0ab75c443bc))
+* ♻️ Update project property names for consistency and clarity ([2e683de](https://github.com/3107Alok/Portfolio/commit/2e683de104843761e61a857ffab7272fac2080c2))
+* ♻️ Update ProjectsListType interface for improved consistency and clarity ([dfd2ec0](https://github.com/3107Alok/Portfolio/commit/dfd2ec039334b94178004378df4388a525c31922))
+* ♻️ Update script tags for structured data and adjust main container width ([ba96a25](https://github.com/3107Alok/Portfolio/commit/ba96a2562b941d5eeca2c5fa769dda5585b372a9))
+* ♻️ Update site and about descriptions for clarity and engagement ([3555632](https://github.com/3107Alok/Portfolio/commit/3555632640b20496e72ec73d83842806bbf03eeb))
+* ♻️ Update skill stacks import and restructure SkillGrid props for improved consistency ([c62f27a](https://github.com/3107Alok/Portfolio/commit/c62f27a17d301c598f64c43d15930d442ace94ff))
+* ♻️ Update Skills component to dynamically import skill stacks for improved performance ([92fcd53](https://github.com/3107Alok/Portfolio/commit/92fcd53fe09be3772b9e6bcfabbb0def3ac4033f))
+* ♻️ Update SVG fill colors to improve visual consistency ([a8fd766](https://github.com/3107Alok/Portfolio/commit/a8fd766bb5c962d2432a12b61eaddc8faf8fd0bc))
+* ♻️ Update TECH_STACK to utilize buildTechStack for improved organization and consistency ([5cbadae](https://github.com/3107Alok/Portfolio/commit/5cbadaeaca56d9d13e4cfce737bea6143c1cdb7f))
+* ♻️ Update VSCode settings and upgrade dependencies for improved performance ([9d85fc5](https://github.com/3107Alok/Portfolio/commit/9d85fc59c119140ca628024452068b3e8914f068))
+* ♻️ Upgrade tailwindcss to v4  and modify related files ([d1d2280](https://github.com/3107Alok/Portfolio/commit/d1d2280a8e90443b9ff17d2116ec8a056e968d76))
+* 🔧 Simplify nightly environment check in headers ([6073cab](https://github.com/3107Alok/Portfolio/commit/6073cab9003e77a1e53fe8395d03658911561e5e))
+* Modified Resume PDF ([c12d755](https://github.com/3107Alok/Portfolio/commit/c12d7551786b1055ba1cccc681f6bc1e4dbad864))
+* Update resume links in Header and MobileHeader components ([add7725](https://github.com/3107Alok/Portfolio/commit/add772549ba8ad3aef61c5701ef589bdacfaa632))
+* Update resume links in Header and MobileHeader components ([a5749ad](https://github.com/3107Alok/Portfolio/commit/a5749ad46387e9e9a7eaa3ceb549a13e4dc6c44d))
+
+### 📝 Documentation
+
+* 📚  Update README to include details about nightly build and new features ([79fc2ae](https://github.com/3107Alok/Portfolio/commit/79fc2aed168005e12d396c7b1c389a3a63c2712f))
+* 📚 Credit circular theme toggle animation source ([14cfbfa](https://github.com/3107Alok/Portfolio/commit/14cfbfac4e05e3f5994757dc5c453cad5b650b67))
+* 📚 Enforce visible attribution requirement and clarify MIT usage terms ([d8668e6](https://github.com/3107Alok/Portfolio/commit/d8668e6475b8693aa6d6a89d8d6496704e9e88d2))
+* 📚 Update README with live demo links and clarify nightly build features ([4a99686](https://github.com/3107Alok/Portfolio/commit/4a9968676f5853655345a6a267c23746a8935a85))
+
+### 🎨 Styles
+
+* 🎨 Enhance Theme toggle with expanding circle transition ([b1264ef](https://github.com/3107Alok/Portfolio/commit/b1264ef38ce7addc3dc88b7d3a4280e0d45534f8))
+* 💄 Adjust Hero component dimensions and enhance hover effects for Orbit Dots ([3e37441](https://github.com/3107Alok/Portfolio/commit/3e374413130097809dcccd576a09fe258d102ed0))
+* 💄 Remove unnecessary line breaks in Contact section markup ([af7fbc6](https://github.com/3107Alok/Portfolio/commit/af7fbc6aa4673c6096ea4b5ec2d1c11c35fb2c0a))
+* 💄 Update styling for project cards and project list layout ([ab05938](https://github.com/3107Alok/Portfolio/commit/ab05938e4749e3eb7b52cfb792c9a4ee7cf4ab51))
+* improve Projects page UI ([ff6b747](https://github.com/3107Alok/Portfolio/commit/ff6b7472aa6363f84655e3d6bb9a10223c6609dd))
+* modify Projects section Card UI ([be59c06](https://github.com/3107Alok/Portfolio/commit/be59c06f04a33c84b701b67092f58ad61489eefb))
+
+### 🔍 SEO Updates
+
+* :zap: Standardize import quotes and improve SEO metadata across multiple components ([21244d5](https://github.com/3107Alok/Portfolio/commit/21244d5599265225316eec85bff56e7a519cc418))
+
 ## [2.0.0](https://github.com/ChiragChrg/Portfolio/compare/v1.0.3...v2.0.0) (2026-05-16)
 
 ### ⚠ BREAKING CHANGES
