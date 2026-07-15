@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.1](https://github.com/3107Alok/Portfolio/compare/v1.1.0...v1.1.1) (2026-07-15)
+
+### 🐛 Bug Fixes
+
+* dynamically customize modal live button text and icon for app and web ([39f233e](https://github.com/3107Alok/Portfolio/commit/39f233ee055137683eced27c3a01ea07abd6033f))
+
 ## [1.1.0](https://github.com/3107Alok/Portfolio/compare/v1.0.0...v1.1.0) (2026-07-15)
 
 ### ✨ Features
