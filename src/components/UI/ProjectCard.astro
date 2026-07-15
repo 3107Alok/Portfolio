@@ -12,6 +12,13 @@ const { project, className }: Props = Astro.props;
 // PROJECT STATUS
 const PROJECT_STATUS = project.status === "development" ? "BUILDING" : "COMPLETED";
 
+// PLATFORM LABEL CHECK (App vs Web)
+const isApp = project.platform?.toLowerCase().includes("flutter") || 
+              project.platform?.toLowerCase().includes("cross-platform") || 
+              project.platform?.toLowerCase().includes("android") || 
+              project.platform?.toLowerCase().includes("ios");
+const platformLabel = isApp ? "App" : "Web";
+
 // SERIALIZE PROJECT DATA FOR MODAL
 const projectData = JSON.stringify({
     name: project.name,
@@ -73,12 +80,23 @@ const projectData = JSON.stringify({
                 </h3>
             </div>
             
-            <span class="inline-flex items-center gap-1 text-[10px] md:text-xs font-semibold tracking-wider text-purple-400 shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-purple-400/80 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                {project.duration || "2 Months"}
-            </span>
+            <div class="flex flex-col items-end gap-1.5 shrink-0">
+                <span class="inline-flex items-center gap-1 text-[10px] md:text-xs font-semibold tracking-wider text-purple-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-purple-400/80 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    {project.duration || "2 Months"}
+                </span>
+
+                <span class={`inline-flex items-center px-2 py-0.5 rounded-full text-[9px] font-bold tracking-wider uppercase border bg-gradient-to-r transition-all duration-300 shadow-sm animate-pulse-subtle ${
+                    isApp 
+                        ? "bg-blue-500/10 border-blue-500/30 text-blue-400 shadow-blue-500/5" 
+                        : "bg-emerald-500/10 border-emerald-500/30 text-emerald-400 shadow-emerald-500/5"
+                }`}>
+                    <span class={`w-1 h-1 rounded-full mr-1.5 ${isApp ? "bg-blue-400" : "bg-emerald-400"}`}></span>
+                    {platformLabel}
+                </span>
+            </div>
         </div>
 
         <!-- 2-Line Description (truncated) -->
@@ -120,3 +138,13 @@ const projectData = JSON.stringify({
         </div>
     </div>
 </div>
+
+<style>
+@keyframes pulse-subtle {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.85; transform: scale(0.97); }
+}
+.animate-pulse-subtle {
+    animation: pulse-subtle 3s infinite ease-in-out;
+}
+</style>

@@ -10,15 +10,15 @@ const { config } = Astro.props;
     <SectionTitle
         title="About Me"
         color="primary"
-        className="h-screen flex flex-col justify-center"
+        className="min-h-[calc(100vh-6rem)] lg:h-[calc(100vh-6rem)] flex flex-col justify-center py-6 lg:py-0"
     >
-        <div class="flex_center flex-col lg:flex-row w-full h-full py-10 gap-8">
+        <div class="flex_center flex-col lg:flex-row w-full h-full py-6 lg:py-10 gap-8">
             <Image
                 src={Avatar_250}
                 alt="About_Avatar"
-                class="Fade_Up rounded-full scale-x-[-1] lg:mx-14"
-                width={500}
-                height={500}
+                class="Fade_Up rounded-full scale-x-[-1] w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] lg:w-[350px] lg:h-[350px] object-cover lg:mx-14"
+                width={350}
+                height={350}
                 loading="lazy"
                 decoding="async"
             />
