@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.1](https://github.com/3107Alok/Portfolio/compare/v1.2.0...v1.2.1) (2026-07-15)
+
+### 🐛 Bug Fixes
+
+* update BioScan AI github repository link ([b8197c2](https://github.com/3107Alok/Portfolio/commit/b8197c247051a243978d574a4a40def1d4c212b4))
+
 ## [1.2.0](https://github.com/3107Alok/Portfolio/compare/v1.1.1...v1.2.0) (2026-07-15)
 
 ### ✨ Features
