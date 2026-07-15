@@ -340,7 +340,7 @@ export const PROJECTS_LIST: IProject[] = [
         name: "AttendX",
         shortDescription: "An AI-powered smart attendance management application that enables faculty to register students, automate attendance using face recognition, and monitor attendance records through interactive dashboards and student analytics.",
         description: "AttendX is a modern smart attendance solution built for educational institutions to simplify classroom attendance using on-device AI face recognition. The application allows faculty to enroll students, conduct attendance sessions, manage student records, and monitor attendance statistics through an intuitive dashboard. Built with Flutter, Firebase, TensorFlow Lite, and Google ML Kit, AttendX combines secure authentication, intelligent face recognition, and real-time attendance management into a clean cross-platform application.",
-        logoImage: LOGOS.ArmsLogo,
+        logoImage: LOGOS.AttendXLogo,
         previewImage: SCREENSHOTS.AttendXMainpage,
         deviceMockupImage: MOCKUPS.VortexaMockup,
         theme: "#a855f7",
