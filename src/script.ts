@@ -669,6 +669,30 @@ function initProjectModal() {
                 }
             }
 
+            // Optional architecture flow
+            const architectureSec = document.getElementById("modal-architecture-section");
+            const architectureEl = document.getElementById("modal-architecture");
+            if (architectureSec && architectureEl) {
+                if (project.architecture && project.architecture.length) {
+                    architectureEl.innerHTML = project.architecture.map((step: string, i: number) => `
+                        <div class="flex flex-col items-center w-full">
+                            <div class="px-4 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-white/90 text-xs font-semibold tracking-wide text-center w-full max-w-[280px] transition-all shadow-sm">
+                                ${step}
+                            </div>
+                            ${i < project.architecture.length - 1 ? `
+                                <div class="w-px h-5 bg-gradient-to-b from-primary/60 to-purple-500/10 my-0.5 animate-pulse shrink-0"></div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-purple-500/80 -mt-1 mb-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            ` : ''}
+                        </div>
+                    `).join('');
+                    architectureSec.classList.remove("hidden");
+                } else {
+                    architectureSec.classList.add("hidden");
+                }
+            }
+
             // Clean previous carousel interval
             if (carouselInterval) clearInterval(carouselInterval);
 
@@ -678,28 +702,45 @@ function initProjectModal() {
                               project.platform.toLowerCase().includes("flutter") || 
                               project.platform.toLowerCase().includes("mobile")) && 
                              !project.platform.toLowerCase().includes("web");
+
+            // New layout containers
+            const webShowcaseContainer = document.getElementById("web-showcase-container");
+            const mobileShowcaseColumn = document.getElementById("mobile-showcase-column");
+            const infoColumn = document.getElementById("modal-info-column");
             
-            if (browserMockup && phoneMockup) {
-                if (isMobile) {
-                    phoneMockup.classList.remove("hidden");
-                    browserMockup.classList.add("hidden");
-                    currentCarousel = phoneCarousel;
-                    currentDots = phoneMockup.querySelector(".carousel-dots");
-                } else {
-                    browserMockup.classList.remove("hidden");
-                    phoneMockup.classList.add("hidden");
-                    currentCarousel = browserCarousel;
-                    currentDots = browserMockup.querySelector(".carousel-dots");
-                    
-                    // Update URL display in browser frame mockup
-                    const urlDisplay = document.getElementById("browser-url-text");
-                    if (urlDisplay) {
-                        urlDisplay.textContent = (project.liveUrl && project.liveUrl.trim() !== "")
-                            ? project.liveUrl
-                            : (project.sourceUrl && project.sourceUrl.trim() !== "")
-                                ? project.sourceUrl
-                                : `https://${project.name.toLowerCase().replaceAll(' ', '')}.com`;
-                    }
+            if (isMobile) {
+                // --- MOBILE LAYOUT: phone on the right side column ---
+                if (webShowcaseContainer) webShowcaseContainer.classList.add("hidden");
+                if (mobileShowcaseColumn) mobileShowcaseColumn.classList.remove("hidden");
+                if (infoColumn) {
+                    infoColumn.classList.remove("w-full");
+                    infoColumn.classList.add("lg:w-[60%]");
+                }
+                if (phoneMockup) phoneMockup.classList.remove("hidden");
+                if (browserMockup) browserMockup.classList.add("hidden");
+                currentCarousel = phoneCarousel;
+                currentDots = phoneMockup ? phoneMockup.querySelector(".carousel-dots") : null;
+            } else {
+                // --- WEB LAYOUT: browser mockup full-width at top ---
+                if (webShowcaseContainer) webShowcaseContainer.classList.remove("hidden");
+                if (mobileShowcaseColumn) mobileShowcaseColumn.classList.add("hidden");
+                if (infoColumn) {
+                    infoColumn.classList.remove("lg:w-[60%]");
+                    infoColumn.classList.add("w-full");
+                }
+                if (browserMockup) browserMockup.classList.remove("hidden");
+                if (phoneMockup) phoneMockup.classList.add("hidden");
+                currentCarousel = browserCarousel;
+                currentDots = browserMockup ? browserMockup.querySelector(".carousel-dots") : null;
+
+                // Update URL in browser address bar
+                const urlDisplay = document.getElementById("browser-url-text");
+                if (urlDisplay) {
+                    urlDisplay.textContent = (project.liveUrl && project.liveUrl.trim() !== "")
+                        ? project.liveUrl
+                        : (project.sourceUrl && project.sourceUrl.trim() !== "")
+                            ? project.sourceUrl
+                            : `https://${project.name.toLowerCase().replaceAll(' ', '')}.com`;
                 }
             }
 
@@ -707,10 +748,9 @@ function initProjectModal() {
                 totalSlides = project.screenshots.length;
                 currentSlide = 0;
 
-                // Inject slides (absolute-fade layout)
                 currentCarousel.innerHTML = project.screenshots.map((src: string, i: number) => `
                     <div class="carousel-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-500 ease-in-out shrink-0 select-none ${i === 0 ? 'opacity-100 z-10 pointer-events-auto' : 'pointer-events-none'}" data-index="${i}">
-                        <img src="${src}" alt="Screenshot" class="w-full h-full object-cover screenshot-preview-trigger" />
+                        <img src="${src}" alt="Screenshot" class="w-full h-full object-contain bg-black/20 screenshot-preview-trigger" />
                     </div>
                 `).join('');
 
@@ -893,6 +933,20 @@ function initProjectModal() {
                     skeleton.style.opacity = "1";
                     skeleton.classList.remove("pointer-events-none");
                 }
+
+                // Reset layout containers for next open
+                const _webContainer = document.getElementById("web-showcase-container");
+                const _mobileColumn = document.getElementById("mobile-showcase-column");
+                const _infoCol = document.getElementById("modal-info-column");
+                if (_webContainer) _webContainer.classList.add("hidden");
+                if (_mobileColumn) _mobileColumn.classList.add("hidden");
+                if (_infoCol) {
+                    _infoCol.classList.remove("w-full", "lg:w-[60%]");
+                }
+                const _bm = document.getElementById("browser-mockup");
+                const _pm = document.getElementById("phone-mockup");
+                if (_bm) _bm.classList.add("hidden");
+                if (_pm) _pm.classList.add("hidden");
             }
         });
     };
@@ -912,6 +966,41 @@ function initProjectModal() {
 
     setupNavigation("browser-mockup");
     setupNavigation("phone-mockup");
+
+    // ── Browser screen click: zoom in / zoom out ──────────────────────────────
+    const browserScreenArea = document.getElementById("browser-screen-area");
+    if (browserScreenArea) {
+        browserScreenArea.addEventListener("click", (e) => {
+            // Don't trigger if the click was on a nav arrow or dot
+            const target = e.target as HTMLElement;
+            if (target.closest(".carousel-prev") || target.closest(".carousel-next") || target.closest(".carousel-dot")) return;
+
+            // If viewer is already open → close it
+            if (viewer && !viewer.classList.contains("pointer-events-none")) {
+                closeFullscreenViewer();
+                browserScreenArea.style.cursor = "zoom-in";
+                return;
+            }
+
+            // Find the visible slide's image
+            const activeSlide = browserCarousel?.querySelector(".carousel-slide[style*='opacity: 1'], .carousel-slide[style*='opacity:1']") as HTMLElement | null;
+            const img = (activeSlide?.querySelector("img") ?? browserCarousel?.querySelector("img")) as HTMLImageElement | null;
+            if (img?.src) {
+                openFullscreenViewer(img.src);
+                browserScreenArea.style.cursor = "zoom-out";
+            }
+        });
+    }
+
+    // Reset cursor when fullscreen viewer closes
+    const patchCloseViewer = () => {
+        if (browserScreenArea) browserScreenArea.style.cursor = "zoom-in";
+    };
+    closeViewer?.addEventListener("click", patchCloseViewer);
+    viewer?.addEventListener("click", (e) => {
+        if (e.target === viewer) patchCloseViewer();
+    });
+    // ─────────────────────────────────────────────────────────────────────────
 
     // Close Events
     closeBtn?.addEventListener("click", closeModal);

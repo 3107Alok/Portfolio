@@ -52,9 +52,59 @@
             style="-webkit-overflow-scrolling: touch; scrollbar-width: thin;"
             data-lenis-prevent
         >
-            <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 relative w-full">
-                <!-- Left Column (60% Desktop) - Information -->
-                <div class="w-full lg:w-[60%] flex flex-col space-y-8 order-2 sm:order-1 lg:order-1 pb-10">
+            <!-- Web Showcase (Top layout for laptop browser screenshots) -->
+            <div
+                id="web-showcase-container"
+                class="hidden w-full flex justify-center pb-8 border-b border-white/10 mb-8 shrink-0"
+            >
+                <!-- Browser Mockup (Web Projects) -->
+                <div
+                    id="browser-mockup"
+                    class="hidden w-full max-w-2xl rounded-xl border border-white/10 bg-black/40 overflow-hidden shadow-2xl transition-all duration-300"
+                >
+                    <div class="h-7 bg-white/5 border-b border-white/10 flex items-center px-3 gap-1.5 shrink-0">
+                        <span class="w-2 h-2 rounded-full bg-[#ff5f56]"></span>
+                        <span class="w-2 h-2 rounded-full bg-[#ffbd2e]"></span>
+                        <span class="w-2 h-2 rounded-full bg-[#27c93f]"></span>
+                        <div id="browser-url-text" class="h-4 flex-1 mx-3 sm:mx-6 rounded bg-white/5 border border-white/5 text-[8px] text-white/30 flex items-center px-2 justify-center truncate">
+                            https://your-demo.com
+                        </div>
+                    </div>
+                    <!-- Screen area: click to zoom -->
+                    <div id="browser-screen-area" class="relative aspect-[16/10] overflow-hidden group cursor-zoom-in">
+                        <div id="browser-carousel" class="w-full h-full relative overflow-hidden">
+                            <!-- Slides dynamically injected -->
+                        </div>
+
+                        <!-- Zoom hint icon (visible on hover) -->
+                        <div class="browser-zoom-hint absolute top-2 right-2 p-1 rounded bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20 pointer-events-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-white/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0zm-6-3v6m-3-3h6" />
+                            </svg>
+                        </div>
+
+                        <!-- Navigation Arrows -->
+                        <button class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 p-1.5 rounded-full bg-black/50 hover:bg-black/80 text-white border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                        <button class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 p-1.5 rounded-full bg-black/50 hover:bg-black/80 text-white border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+
+                        <!-- Carousel Dots -->
+                        <div class="carousel-dots absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 z-10"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Layout Row -->
+            <div id="info-layout-container" class="flex flex-col lg:flex-row gap-8 lg:gap-12 relative w-full">
+                <!-- Info Column (Stretches to 100% on Web, 60% on App/Mobile) -->
+                <div id="modal-info-column" class="w-full lg:w-[60%] flex flex-col space-y-8 pb-10">
                     
                     <!-- Project Title & Tagline & Action Buttons -->
                     <div class="space-y-4">
@@ -128,6 +178,14 @@
                         </div>
                     </div>
 
+                    <!-- Project Architecture (Optional) -->
+                    <div id="modal-architecture-section" class="space-y-4 hidden">
+                        <h3 class="text-xs uppercase tracking-widest text-white/40 font-semibold">Architecture</h3>
+                        <div id="modal-architecture" class="flex flex-col items-center justify-start gap-1 bg-white/5 border border-white/10 rounded-xl p-6 w-full max-w-md mx-auto">
+                            <!-- Dynamic steps -->
+                        </div>
+                    </div>
+
                     <!-- Technical Challenges (Optional) -->
                     <div id="modal-challenges-section" class="space-y-3 hidden">
                         <h3 class="text-xs uppercase tracking-widest text-white/40 font-semibold">Technical Challenges</h3>
@@ -146,44 +204,11 @@
 
                 </div>
 
-                <!-- Right Column (40% Desktop) - Showcase -->
-                <div class="w-full lg:w-[40%] flex flex-col items-center justify-start order-1 sm:order-2 lg:order-2 shrink-0 py-6 bg-black/20 rounded-2xl border border-white/5 overflow-hidden lg:h-fit lg:sticky lg:top-0">
-                    
-                    <!-- Browser Mockup (Web Projects) -->
-                    <div
-                        id="browser-mockup"
-                        class="hidden w-full max-w-sm sm:max-w-md md:max-w-2xl rounded-lg border border-white/10 bg-black/40 overflow-hidden shadow-xl"
-                    >
-                        <div class="h-7 bg-white/5 border-b border-white/10 flex items-center px-4 gap-1.5 shrink-0">
-                            <span class="w-2.5 h-2.5 rounded-full bg-[#ff5f56]"></span>
-                            <span class="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]"></span>
-                            <span class="w-2.5 h-2.5 rounded-full bg-[#27c93f]"></span>
-                            <div id="browser-url-text" class="h-4 flex-1 mx-4 sm:mx-8 rounded bg-white/5 border border-white/5 text-[9px] text-white/30 flex items-center px-3 justify-center truncate">
-                                https://your-demo.com
-                            </div>
-                        </div>
-                        <div class="relative aspect-[16/10] overflow-hidden group">
-                            <div id="browser-carousel" class="w-full h-full relative overflow-hidden cursor-zoom-in">
-                                <!-- Slides dynamically injected -->
-                            </div>
-                            
-                            <!-- Navigation Arrows -->
-                            <button class="carousel-prev absolute left-3 top-1/2 -translate-y-1/2 p-1.5 rounded-full bg-black/50 hover:bg-black/80 text-white border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
-                                </svg>
-                            </button>
-                            <button class="carousel-next absolute right-3 top-1/2 -translate-y-1/2 p-1.5 rounded-full bg-black/50 hover:bg-black/80 text-white border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
-                                </svg>
-                            </button>
-
-                            <!-- Carousel Dots -->
-                            <div class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10"></div>
-                        </div>
-                    </div>
-
+                <!-- Right Column (Showcase for Mobile projects only) -->
+                <div
+                    id="mobile-showcase-column"
+                    class="hidden w-full lg:w-[40%] flex flex-col items-center justify-start shrink-0 py-6 bg-black/20 rounded-2xl border border-white/5 overflow-hidden lg:h-fit lg:sticky lg:top-0"
+                >
                     <!-- Phone Mockup (Mobile Projects) -->
                     <div
                         id="phone-mockup"
