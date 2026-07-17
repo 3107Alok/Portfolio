@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.4.0](https://github.com/3107Alok/Portfolio/compare/v1.3.0...v1.4.0) (2026-07-17)
+
+### ✨ Features
+
+* smaller browser mockup with click-to-zoom screen toggle ([63acfc6](https://github.com/3107Alok/Portfolio/commit/63acfc6600c8a924fef639b8579a774888eda71a))
+
 ## [1.3.0](https://github.com/3107Alok/Portfolio/compare/v1.2.1...v1.3.0) (2026-07-15)
 
 ### ✨ Features
