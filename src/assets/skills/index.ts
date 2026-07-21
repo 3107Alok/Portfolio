@@ -17,6 +17,8 @@ import HtmlIcon from "./html.svg";
 import CssIcon from "./css.svg";
 import ReactIcon from "./reactjs.svg";
 import NextIcon from "./nextjs.svg";
+import TypeScriptIcon from "./typescript.svg";
+import FastAPIIcon from "./fastapi.svg";
 
 // Backend
 import FlaskIcon from "./flask.svg";
@@ -64,6 +66,8 @@ export default {
     CssIcon,
     ReactIcon,
     NextIcon,
+    TypeScriptIcon,
+    FastAPIIcon,
     FlaskIcon,
     NodeIcon,
     FirebaseIcon,

@@ -59,6 +59,7 @@ export interface IProject {
     screenshots?: ImageMetadata[];
     challenges?: string;
     improvements?: string;
+    architecture?: string[];
 }
 
 /**
@@ -337,6 +338,102 @@ export const PROJECTS_LIST: IProject[] = [
     },
     {
         isHidden: false,
+        name: "DocMind AI",
+        shortDescription: "An AI-powered intelligent document assistant that enables users to upload PDFs and engage in context-aware conversations, powered by a dual-LLM RAG pipeline with automatic provider failover.",
+        description: "DocMind AI is a production-ready AI-powered RAG platform that transforms PDFs into interactive knowledge bases. Users can upload documents and ask natural-language questions, receiving source-grounded responses through semantic retrieval and a dual-LLM architecture with automatic failover between Groq and Gemini. The platform is built with Next.js, FastAPI, ChromaDB, MongoDB GridFS, and Firebase, delivering a fast, secure, and scalable document intelligence experience.",
+        logoImage: LOGOS.NuklearbrainLogo,
+        previewImage: SCREENSHOTS.DocMindAIMainpage,
+        deviceMockupImage: MOCKUPS.ARMSv3Mockup,
+        theme: "#a855f7",
+        status: "completed",
+        liveUrl: "https://doc-mind-ai-alpha.vercel.app",
+        sourceUrl: "https://github.com/3107Alok/DocMind-AI",
+        role: "Full Stack Developer (Solo)",
+        duration: "June 2026 – July 2026",
+        platform: "Responsive Web Application",
+        screenshots: [
+            SCREENSHOTS.DocMindAIShot1,
+            SCREENSHOTS.DocMindAIShot2,
+            SCREENSHOTS.DocMindAIShot3,
+            SCREENSHOTS.DocMindAIShot4,
+            SCREENSHOTS.DocMindAIShot5,
+            SCREENSHOTS.DocMindAIShot6
+        ],
+        technologies: [
+            TECH_STACK.Nextjs,
+            TECH_STACK.TypeScript,
+            TECH_STACK.CSS,
+            TECH_STACK.FastAPI,
+            TECH_STACK.Python,
+            TECH_STACK.RESTAPI,
+            {
+                title: "Groq",
+                description: "Inference engine for low-latency LLM completions.",
+                icon: TECH_STACK.Python.icon
+            },
+            {
+                title: "Gemini",
+                description: "Multimodal AI models for text generation and fallback execution.",
+                icon: TECH_STACK.Firebase.icon
+            },
+            {
+                title: "ChromaDB",
+                description: "Vector database for semantic search and contextual retrieval.",
+                icon: TECH_STACK.MongoDB.icon
+            },
+            {
+                title: "MongoDB GridFS",
+                description: "GridFS specification for storing large files in MongoDB.",
+                icon: TECH_STACK.MongoDB.icon
+            },
+            TECH_STACK.Firestore,
+            TECH_STACK.Firebase,
+            TECH_STACK.Vercel,
+            TECH_STACK.Render
+        ],
+        features: [
+            {
+                title: "Dual-LLM Routing",
+                description: "Automatically routes requests to Groq for low-latency inference and transparently switches to Gemini Flash whenever rate limits or transient failures occur."
+            },
+            {
+                title: "Retrieval-Augmented Generation",
+                description: "Processes uploaded PDFs using semantic chunking, Gemini Embeddings, ChromaDB vector search, and contextual retrieval before generating responses."
+            },
+            {
+                title: "Context-Aware Conversations",
+                description: "Maintains conversation history with Firestore to support follow-up questions and multi-turn document discussions."
+            },
+            {
+                title: "Secure Document Management",
+                description: "Stores PDFs securely using MongoDB GridFS while providing upload, preview, deletion, and document switching capabilities."
+            },
+            {
+                title: "Authentication & User Isolation",
+                description: "Firebase Authentication with JWT verification ensures secure sessions and complete document isolation between users."
+            },
+            {
+                title: "Responsive Modern Interface",
+                description: "Clean Apple/Linear-inspired UI with responsive layouts, smooth animations, loading states, and premium user experience."
+            }
+        ],
+        challenges: "Designed a provider-agnostic dual-LLM routing engine with intelligent fallback logic | Optimized backend memory usage by replacing SentenceTransformers with Gemini Embeddings | Solved ChromaDB deployment limitations on Render | Fixed production migration issues related to localhost-based document URLs | Maintained consistent Firestore conversation ordering across multiple chat sessions",
+        improvements: "Multi-document querying | OCR support for scanned PDFs | Conversation export as PDF | Persistent ChromaDB storage | Collaborative workspaces | Voice-based document interaction",
+        architecture: [
+            "PDF Upload",
+            "PDF Parsing",
+            "Semantic Chunking",
+            "Gemini Embeddings",
+            "ChromaDB",
+            "Retriever",
+            "Dual LLM Router (Groq + Gemini)",
+            "Grounded Response"
+        ],
+        logoSize: 55,
+        versions: []
+    },
+    {
+        isHidden: false,
         name: "AttendX",
         shortDescription: "An AI-powered smart attendance management application that enables faculty to register students, automate attendance using face recognition, and monitor attendance records through interactive dashboards and student analytics.",
         description: "AttendX is a modern smart attendance solution built for educational institutions to simplify classroom attendance using on-device AI face recognition. The application allows faculty to enroll students, conduct attendance sessions, manage student records, and monitor attendance statistics through an intuitive dashboard. Built with Flutter, Firebase, TensorFlow Lite, and Google ML Kit, AttendX combines secure authentication, intelligent face recognition, and real-time attendance management into a clean cross-platform application.",
@@ -575,6 +672,68 @@ export const PROJECTS_LIST: IProject[] = [
         ],
         challenges: "Integrating Raspberry Pi camera with the web application | Optimizing OpenCV image processing for real-time analysis | Handling varying lighting conditions during leaf detection | Building a lightweight Flask-based processing pipeline",
         improvements: "Deep Learning-based Disease Detection | Mobile Application Integration | Cloud Monitoring Dashboard | Multi-Plant Detection | Environmental Sensor Integration | Historical Health Reports | Smart Irrigation Integration",
+        logoSize: 55,
+        versions: []
+    },
+    {
+        isHidden: false,
+        name: "DocMind AI",
+        shortDescription: "A production-ready AI-powered document assistant that enables users to upload PDF documents and have context-aware conversations using a Retrieval-Augmented Generation (RAG) pipeline.",
+        description: "DocMind AI is a full-stack RAG application designed to simplify document understanding by allowing users to interact with PDFs using natural language. The system extracts text, generates semantic embeddings using Gemini Embeddings, indexes vectors in ChromaDB, and performs semantic search to retrieve context-aware answers. It features a multi-LLM architecture with Groq as primary provider and Gemini Flash as fallback, backed by Firebase Auth, MongoDB GridFS, and Firestore for chat history.",
+        logoImage: LOGOS.NuklearbrainLogo,
+        previewImage: SCREENSHOTS.DocMindAIMainpage,
+        deviceMockupImage: MOCKUPS.ARMSv3Mockup,
+        theme: "#3b82f6",
+        status: "completed",
+        liveUrl: "",
+        sourceUrl: "https://github.com/3107Alok/DocMind-AI",
+        downloadUrl: "",
+        role: "Full Stack AI Developer (Solo)",
+        duration: "June 2026 – July 2026",
+        platform: "Web Application",
+        screenshots: [
+            SCREENSHOTS.DocMindAIShot1,
+            SCREENSHOTS.DocMindAIShot2,
+            SCREENSHOTS.DocMindAIShot3,
+            SCREENSHOTS.DocMindAIShot4,
+            SCREENSHOTS.DocMindAIShot5,
+            SCREENSHOTS.DocMindAIShot6
+        ],
+        technologies: [
+            TECH_STACK.Python,
+            TECH_STACK.Firebase,
+            TECH_STACK.MongoDB,
+            TECH_STACK.Vercel,
+            TECH_STACK.Render,
+            TECH_STACK.RESTAPI,
+            TECH_STACK.HTML,
+            TECH_STACK.CSS,
+            TECH_STACK.JavaScript
+        ],
+        features: [
+            {
+                title: "AI-Powered PDF Chat & RAG",
+                description: "Upload PDF documents and ask natural language questions with responses generated using Retrieval-Augmented Generation (RAG)."
+            },
+            {
+                title: "Semantic Vector Search",
+                description: "Uses Gemini Embeddings and ChromaDB vector search to retrieve relevant document chunks instead of keyword matching."
+            },
+            {
+                title: "Multi-LLM Architecture",
+                description: "Features Groq as the primary inference engine with automatic Gemini Flash fallback for high reliability during rate limits."
+            },
+            {
+                title: "Secure Auth & Document Storage",
+                description: "Firebase Authentication for user accounts, MongoDB GridFS for PDF storage, and Firestore for persistent chat logs."
+            },
+            {
+                title: "Intelligent PDF Processing",
+                description: "Extracts document content, performs semantic chunking, generates embeddings, and maintains complete conversation history."
+            }
+        ],
+        challenges: "Designing an end-to-end RAG pipeline from PDF parsing to AI response generation | Implementing semantic chunking and vector similarity search | Integrating multi-LLM routing with automatic fallback | Managing persistent chat history with MongoDB GridFS and Firestore",
+        improvements: "Streaming AI Responses | Multi-Document Chat | OCR Support for Scanned PDFs | Document Citation & Source Highlighting | Voice-Based Document Interaction | AI-Generated Summaries & Flashcards",
         logoSize: 55,
         versions: []
     }

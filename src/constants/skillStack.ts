@@ -29,6 +29,12 @@ export const ProgrammingLanguagesStack = [
         link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
     },
     {
+        name: "TypeScript",
+        description: "Typed superset of JavaScript that compiles to plain JavaScript, adding static types.",
+        icon: SKILLS.TypeScriptIcon,
+        link: "https://www.typescriptlang.org/",
+    },
+    {
         name: "Python",
         description: "High-level, general-purpose programming language focused on readability and rapid development.",
         icon: SKILLS.PythonIcon,
@@ -85,6 +91,12 @@ export const FrontendStack = [
         icon: SKILLS.CssIcon,
         link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
     },
+    {
+        name: "Next.js",
+        description: "React framework for production grade applications with server-side rendering and static generation.",
+        icon: SKILLS.NextIcon,
+        link: "https://nextjs.org/",
+    },
 ] as const;
 
 // 4. Backend
@@ -94,6 +106,12 @@ export const BackendStack = [
         description: "A micro web framework written in Python, designed to make getting started quick and easy.",
         icon: SKILLS.FlaskIcon,
         link: "https://flask.palletsprojects.com/",
+    },
+    {
+        name: "FastAPI",
+        description: "Modern, fast (high-performance), web framework for building APIs with Python 3.8+.",
+        icon: SKILLS.FastAPIIcon,
+        link: "https://fastapi.tiangolo.com/",
     },
     {
         name: "REST API",

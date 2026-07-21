@@ -44,6 +44,15 @@ import AWSDataEnggAssociate from "./AWS Data Engg. Assoc.png"
 import InfosysSpringboardFlutter from "./InfosysSpringboard Mobile App Dev.png"
 import PearsonMeproLevel7 from "./PearsonMepro Level7.png"
 
+// DocMind AI
+import DocMindAIMainpage from "./DocMind_AI_Mainpage.png"
+import DocMindAIShot1 from "./DocMind_AI_Shot1.png"
+import DocMindAIShot2 from "./DocMind_AI_Shot2.png"
+import DocMindAIShot3 from "./DocMind_AI_Shot3.png"
+import DocMindAIShot4 from "./DocMind_AI_Shot4.png"
+import DocMindAIShot5 from "./DocMind_AI_Shot5.png"
+import DocMindAIShot6 from "./DocMind_AI_Shot6.png"
+
 export default {
     // MedVerse
     MedVerseMainpage,
@@ -90,4 +99,13 @@ export default {
     AWSDataEnggAssociate,
     InfosysSpringboardFlutter,
     PearsonMeproLevel7,
+
+    // DocMind AI
+    DocMindAIMainpage,
+    DocMindAIShot1,
+    DocMindAIShot2,
+    DocMindAIShot3,
+    DocMindAIShot4,
+    DocMindAIShot5,
+    DocMindAIShot6,
 };

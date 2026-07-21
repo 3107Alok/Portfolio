@@ -38,7 +38,8 @@ const projectData = JSON.stringify({
     features: project.features.map(f => ({ title: f.title, description: f.description })),
     screenshots: project.screenshots ? project.screenshots.map(s => s.src) : [project.previewImage.src, project.deviceMockupImage.src],
     challenges: project.challenges || "",
-    improvements: project.improvements || ""
+    improvements: project.improvements || "",
+    architecture: project.architecture || []
 });
 ---
 
