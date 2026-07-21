@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.0](https://github.com/3107Alok/Portfolio/compare/v1.4.0...v1.5.0) (2026-07-21)
+
+### ✨ Features
+
+* add DocMind AI project to portfolio projects list ([8cf84ef](https://github.com/3107Alok/Portfolio/commit/8cf84efb3110e291af43fd247fcdef81eed2456d))
+
+### 🐛 Bug Fixes
+
+* remove duplicate DocMind AI entry and update custom logo icon ([fa3fc4e](https://github.com/3107Alok/Portfolio/commit/fa3fc4ea4b0644a6ed64f40351ea99d1d85214b9))
+* update BioScan AI logo icon with custom leaf scanner image ([d61968f](https://github.com/3107Alok/Portfolio/commit/d61968f8622536d940d4408f1a25c8ebb950c1bc))
+
 ## [1.4.0](https://github.com/3107Alok/Portfolio/compare/v1.3.0...v1.4.0) (2026-07-17)
 
 ### ✨ Features
