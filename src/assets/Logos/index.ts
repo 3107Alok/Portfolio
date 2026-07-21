@@ -17,6 +17,7 @@ import MedVerseLogo from "./MedVerseLogo.png"
 import InvoxaLogo from "./InvoxaLogo.png"
 import AttendXLogo from "./AttendXLogo.png"
 import DocMindLogo from "./DocMindLogo.png"
+import BioScanLogo from "./BioScanLogo.png"
 
 export default {
     NextmartLogo,
@@ -38,4 +39,5 @@ export default {
     InvoxaLogo,
     AttendXLogo,
     DocMindLogo,
+    BioScanLogo,
 }

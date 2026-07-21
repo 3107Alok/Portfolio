@@ -608,7 +608,7 @@ export const PROJECTS_LIST: IProject[] = [
         name: "BioScan AI",
         shortDescription: "An IoT-enabled plant health monitoring system that analyzes leaf conditions using computer vision techniques to estimate plant health, tissue damage, and surface coverage in real time.",
         description: "BioScan AI is a smart agriculture project developed to assist in early plant health monitoring using computer vision and IoT. The system captures live leaf images through a Raspberry Pi camera, processes them using OpenCV-based image analysis, and estimates plant health, damage percentage, and leaf coverage in real time. A lightweight Flask backend handles image processing while the web interface displays the processed video stream and live analysis results.",
-        logoImage: LOGOS.ClimateLogo, // Matches climate/plant/agriculture theme!
+        logoImage: LOGOS.BioScanLogo,
         previewImage: SCREENSHOTS.BioScanAI,
         deviceMockupImage: MOCKUPS.ARMSv3Mockup, // Browser mockup for Flask web portal
         theme: "#f59e0b", // Warm Amber theme matching plant health diagnostics / orange status badge
