@@ -16,6 +16,7 @@ import VortexaLogo from "./VortexaLogo.svg"
 import MedVerseLogo from "./MedVerseLogo.png"
 import InvoxaLogo from "./InvoxaLogo.png"
 import AttendXLogo from "./AttendXLogo.png"
+import DocMindLogo from "./DocMindLogo.png"
 
 export default {
     NextmartLogo,
@@ -36,4 +37,5 @@ export default {
     MedVerseLogo,
     InvoxaLogo,
     AttendXLogo,
+    DocMindLogo,
 }

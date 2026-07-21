@@ -341,7 +341,7 @@ export const PROJECTS_LIST: IProject[] = [
         name: "DocMind AI",
         shortDescription: "An AI-powered intelligent document assistant that enables users to upload PDFs and engage in context-aware conversations, powered by a dual-LLM RAG pipeline with automatic provider failover.",
         description: "DocMind AI is a production-ready AI-powered RAG platform that transforms PDFs into interactive knowledge bases. Users can upload documents and ask natural-language questions, receiving source-grounded responses through semantic retrieval and a dual-LLM architecture with automatic failover between Groq and Gemini. The platform is built with Next.js, FastAPI, ChromaDB, MongoDB GridFS, and Firebase, delivering a fast, secure, and scalable document intelligence experience.",
-        logoImage: LOGOS.NuklearbrainLogo,
+        logoImage: LOGOS.DocMindLogo,
         previewImage: SCREENSHOTS.DocMindAIMainpage,
         deviceMockupImage: MOCKUPS.ARMSv3Mockup,
         theme: "#a855f7",
@@ -672,68 +672,6 @@ export const PROJECTS_LIST: IProject[] = [
         ],
         challenges: "Integrating Raspberry Pi camera with the web application | Optimizing OpenCV image processing for real-time analysis | Handling varying lighting conditions during leaf detection | Building a lightweight Flask-based processing pipeline",
         improvements: "Deep Learning-based Disease Detection | Mobile Application Integration | Cloud Monitoring Dashboard | Multi-Plant Detection | Environmental Sensor Integration | Historical Health Reports | Smart Irrigation Integration",
-        logoSize: 55,
-        versions: []
-    },
-    {
-        isHidden: false,
-        name: "DocMind AI",
-        shortDescription: "A production-ready AI-powered document assistant that enables users to upload PDF documents and have context-aware conversations using a Retrieval-Augmented Generation (RAG) pipeline.",
-        description: "DocMind AI is a full-stack RAG application designed to simplify document understanding by allowing users to interact with PDFs using natural language. The system extracts text, generates semantic embeddings using Gemini Embeddings, indexes vectors in ChromaDB, and performs semantic search to retrieve context-aware answers. It features a multi-LLM architecture with Groq as primary provider and Gemini Flash as fallback, backed by Firebase Auth, MongoDB GridFS, and Firestore for chat history.",
-        logoImage: LOGOS.NuklearbrainLogo,
-        previewImage: SCREENSHOTS.DocMindAIMainpage,
-        deviceMockupImage: MOCKUPS.ARMSv3Mockup,
-        theme: "#3b82f6",
-        status: "completed",
-        liveUrl: "",
-        sourceUrl: "https://github.com/3107Alok/DocMind-AI",
-        downloadUrl: "",
-        role: "Full Stack AI Developer (Solo)",
-        duration: "June 2026 – July 2026",
-        platform: "Web Application",
-        screenshots: [
-            SCREENSHOTS.DocMindAIShot1,
-            SCREENSHOTS.DocMindAIShot2,
-            SCREENSHOTS.DocMindAIShot3,
-            SCREENSHOTS.DocMindAIShot4,
-            SCREENSHOTS.DocMindAIShot5,
-            SCREENSHOTS.DocMindAIShot6
-        ],
-        technologies: [
-            TECH_STACK.Python,
-            TECH_STACK.Firebase,
-            TECH_STACK.MongoDB,
-            TECH_STACK.Vercel,
-            TECH_STACK.Render,
-            TECH_STACK.RESTAPI,
-            TECH_STACK.HTML,
-            TECH_STACK.CSS,
-            TECH_STACK.JavaScript
-        ],
-        features: [
-            {
-                title: "AI-Powered PDF Chat & RAG",
-                description: "Upload PDF documents and ask natural language questions with responses generated using Retrieval-Augmented Generation (RAG)."
-            },
-            {
-                title: "Semantic Vector Search",
-                description: "Uses Gemini Embeddings and ChromaDB vector search to retrieve relevant document chunks instead of keyword matching."
-            },
-            {
-                title: "Multi-LLM Architecture",
-                description: "Features Groq as the primary inference engine with automatic Gemini Flash fallback for high reliability during rate limits."
-            },
-            {
-                title: "Secure Auth & Document Storage",
-                description: "Firebase Authentication for user accounts, MongoDB GridFS for PDF storage, and Firestore for persistent chat logs."
-            },
-            {
-                title: "Intelligent PDF Processing",
-                description: "Extracts document content, performs semantic chunking, generates embeddings, and maintains complete conversation history."
-            }
-        ],
-        challenges: "Designing an end-to-end RAG pipeline from PDF parsing to AI response generation | Implementing semantic chunking and vector similarity search | Integrating multi-LLM routing with automatic fallback | Managing persistent chat history with MongoDB GridFS and Firestore",
-        improvements: "Streaming AI Responses | Multi-Document Chat | OCR Support for Scanned PDFs | Document Citation & Source Highlighting | Voice-Based Document Interaction | AI-Generated Summaries & Flashcards",
         logoSize: 55,
         versions: []
     }
