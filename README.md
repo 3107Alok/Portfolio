@@ -1,13 +1,11 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/530c2667-5dbc-4df3-824c-de37f975c833/deploy-status)](https://app.netlify.com/sites/AlokSingh/deploys)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-##### Created : 09/04/2023
+##### Created : 15/07/2026
 
-# AlokSingh | My Personal Portfolio | Fullstack Web Developer
+# AlokSingh | My Personal Portfolio | Flutter Devloper
 Welcome to AlokSingh's portfolio website, your gateway to the dynamic world of full stack web development. Immerse yourself in the digital realm where my expertise in coding and design converges to create extraordinary online experiences.
 
-## 💻 Preview
-![Portfolio Preview](public/Mockup_Preview.png)
 
 ## 🚀 Live Demo  
 Check out the current live version of the portfolio:  
@@ -37,8 +35,7 @@ The portfolio leverages the following technologies:
       <a href="https://greensock.com/docs/" title="GSAP"><img src="https://raw.githubusercontent.com/AlokSingh/AlokSingh.github.io/main/icons/gsap.svg" alt="GSAP" width="40"/></a>&emsp;
 </div>
 
-## 🗼 LightHouse Audit
-![LightHouse Audit Preview](public/LightHouse_Audit.jpg)
+
 
 ## 🛠️ Installation and Setup
 
